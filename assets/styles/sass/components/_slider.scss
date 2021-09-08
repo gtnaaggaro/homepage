@@ -1,0 +1,160 @@
+.slider-view {
+	.slide {
+		display: none;
+		visibility: hidden;
+		&:first-child {
+			display: block;
+			visibility: hidden;
+		}
+	}
+	&.slick-initialized {
+		.slick-list {
+			.slick-slide {
+				display: block;
+				visibility: visible;
+				&:first-child {
+					display: block;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+
+.slick-slider {
+	.slick-list {
+		.slick-slide {
+			display: none;
+			&:first-child {
+				display: block;
+			}
+		}
+		a {
+			outline: none;
+		}
+	}
+	&.slick-initialized {
+		.slick-list {
+			.slick-slide {
+				display: block !important;
+			}
+		}
+	}
+}
+.slick-arrow {
+	width: 30px;
+	height: 30px;
+	text-indent: -9999999px;
+	overflow: hidden;
+	position: absolute;
+	top: calc(50% - 15px);
+	border-radius: 0;
+	@include transition(0.5s all);
+	@include shadow(none);
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+
+	&.slick-prev,
+	&.slick-next {
+		z-index: 1;
+		width: 40px;
+		height: 40px;
+		border: 1px solid $white;
+		border-radius: 100%;
+		z-index: 0;
+		&:hover {
+			opacity: 1;
+			border: 1px solid $orange;
+			border-radius: 100%;
+			width: 40px;
+			height: 40px;
+		}
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&.slick-prev {
+		background: url("#{$assetPath}left_arrow.png") no-repeat 9px 7px;
+		left: -20px;
+	}
+
+	&.slick-next {
+		background: url("#{$assetPath}left_arrow.png") no-repeat 14px 7px;
+		right: -20px;
+		@include transform(scaleX(-1));
+	}
+
+	&.slick-disabled {
+		opacity: 0.3;
+		cursor: not-allowed;
+		&:hover {
+			opacity: 0.3;
+		}
+	}
+}
+
+.slick-dots {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	li {
+		position: relative;
+		z-index: 0;
+		margin: 0 5px;
+		list-style-type: none;
+		display: inline-block;
+		vertical-align: middle;
+		width: 5px;
+		height: 5px;
+		border: none;
+		background: #d1cfbb;
+		@include radius(50%);
+		overflow: hidden;
+		cursor: pointer;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.slick-active {
+			width: 10px;
+			height: 10px;
+		}
+		button {
+			display: none;
+		}
+		&.slick-active {
+			background: $orange;
+			border: 2px solid $orange;
+		}
+
+		&:only-child {
+			display: none;
+		}
+	}
+	@include mq(tablet) {
+		text-align: left;
+		padding-left: 10px;
+		li {
+			width: 5px;
+			height: 5px;
+			&.slick-active {
+				width: 8px;
+				height: 8px;
+			}
+		}
+	}
+}

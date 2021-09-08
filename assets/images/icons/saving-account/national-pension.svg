@@ -1,0 +1,11 @@
+<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 1H16V17H3V15H2V17C2 17.5523 2.44772 18 3 18H16C16.5523 18 17 17.5523 17 17V1C17 0.447715 16.5523 0 16 0H3C2.44772 0 2 0.447716 2 1V13H3L3 1Z" fill="#3791B8"/>
+<circle cx="8" cy="14" r="1.5" stroke="#3791B8"/>
+<circle cx="3" cy="14" r="1.5" stroke="#3791B8"/>
+<line x1="4.5" y1="13.5" x2="6.5" y2="13.5" stroke="#3791B8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9.5" y1="13.5" x2="10.5" y2="13.5" stroke="#3791B8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="11.5" y1="3.5" x2="13.5" y2="3.5" stroke="#3791B8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="5.5" y1="6.5" x2="13.5" y2="6.5" stroke="#3791B8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="7.5" y1="8.5" x2="13.5" y2="8.5" stroke="#3791B8" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="0.5" y1="13.5" x2="1.5" y2="13.5" stroke="#3791B8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

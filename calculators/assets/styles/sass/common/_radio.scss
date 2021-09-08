@@ -1,0 +1,93 @@
+@import "mixins";
+
+
+/* The container */
+.radio-wrap {
+    display: block;
+    position: relative;
+    // padding-left: 35px;
+    // margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: -1px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: $white;
+    line-height: 36px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid $orange;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-wrap:hover input ~ .checkmark {
+    background-color: $white;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-wrap input:checked ~ .checkmark {
+    background-color: $orange;
+    color: $white;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-wrap input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  // .radio-wrap .checkmark:after {
+  //      top: 9px;
+  //     left: 9px;
+  //     width: 8px;
+  //     height: 8px;
+  //     border-radius: 50%;
+  //     background: white;
+  // }
+
+  .radio-style-box {
+      display: flex;
+      .radio-wrap {
+          width: 90px;
+          height: 40px;
+          &.width-142 {
+            width: 142px;
+          }
+          &.width-74 {
+            width: 74px;
+          }
+          &.width-210 {
+            width: 210px;
+          }
+      }
+  }

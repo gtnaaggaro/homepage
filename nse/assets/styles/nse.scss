@@ -1,0 +1,105 @@
+@import "sass/layout/custom";
+
+.share-value {
+  @include shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
+  margin: 0 auto;
+  background: #fafaf6;
+  padding: 20px;
+  text-align: center;
+  @include radius(50px);
+  label,
+  .price,
+  .currency,
+  .profit-loss {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: $green;
+    .sign {
+      margin-left: 8px;
+      &:before {
+        content: "";
+        background-image: url("#{$assetPath}tabs1/green_top-arrow.png");
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        background-position: center;
+      }
+    }
+  }
+  .profit-loss {
+    font-size: 22px;
+    vertical-align: text-top;
+    sub {
+      bottom: -0.13em;
+      font-size: 22px;
+    }
+  }
+  label {
+    color: $darkGrey;
+    font-weight: 500;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .price {
+    min-width: 100px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+    color: $darkGrey;
+  }
+  .currency {
+    text-transform: uppercase;
+    color: $darkGrey;
+    line-height: normal;
+  }
+}
+@include mq(tablet) {
+  .share-value {
+    label {
+      font-size: 13px;
+      clear: both;
+      display: block;
+      font-weight: bold;
+    }
+    .price {
+      font-size: 24px;
+      line-height: 24px;
+    }
+    .currency {
+      font-size: 13px;
+    }
+    .profit-loss {
+      font-size: 16px;
+      .sign {
+        width: 10px;
+        height: 12px;
+      }
+    }
+  }
+}
+@include mq(phone-wide) {
+  .share-value {
+    bottom: -38px;
+  }
+}
+@include mq(phone) {
+  .share-value {
+    label,
+    .price,
+    .currency,
+    .profit-loss {
+      margin-right: 0;
+    }
+  }
+}
+.share-value-iframe {
+  position: absolute;
+  width: 80%;
+  height: 80px;
+  left: 50%;
+  bottom: -45px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* rates & charges end*/

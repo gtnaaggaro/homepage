@@ -1,0 +1,393 @@
+/* ways to bank section start */
+.ways-to-bank-section {
+  position: relative;
+  padding: 40px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 158px;
+    background: $grey4;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  .slick-list.draggable {
+    min-height: 216px;
+  }
+  .section-inner {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    // max-width: 100%;
+    // padding: 40px 0 0 0;
+  }
+  .tab-content {
+    background: $white;
+    .tab-pane {
+      padding: 30px 20px;
+      min-height: 405px;
+      max-width: 500px;
+      .way-to-bank-content {
+        p {
+          margin-bottom: 15px;
+          color: $darkGrey2;
+        }
+        ul {
+          li {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            color: $darkGrey2;
+          }
+        }
+      }
+      &.whatsapp-content {
+        max-width: 640px;
+        .content {
+          margin-bottom: 30px;
+          ul {
+            max-width: 480px;
+          }
+          .ic-more {
+            margin: 0 20px;
+          }
+        }
+        h5 {
+          font-size: 14px;
+          line-height: 18px;
+          margin-bottom: 5px;
+        }
+        .msg-box {
+          background: $textGreyLight2;
+          @include radius(5px);
+          padding: 10px 30px;
+        }
+        .or {
+          font-weight: bold;
+          color: $darkGrey;
+          padding: 10px 30px;
+        }
+        .form-groups {
+          position: relative;
+          padding: 10px 0;
+          .form-group-input {
+            max-width: 310px;
+            @include display-flex;
+            padding: 5px 0 8px;
+            border-bottom: 0.5px solid $textGrey;
+            margin-bottom: 10px;
+            &.error {
+              border-bottom: 0.5px solid $maroon;
+            }
+            .icon {
+              margin-right: 10px;
+              width: auto;
+            }
+            .input-box {
+              width: 90%;
+              input {
+                background: transparent;
+                border: 0;
+                color: $textGreyLight;
+                max-width: 300px;
+                width: 100%;
+                &.error {
+                  color: $red1;
+                }
+                &::placeholder {
+                  color: $textGreyLight;
+                }
+                &::-ms-clear {
+                  display: none;
+                }
+                &:-internal-autofill-selected,
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus &:-webkit-autofill {
+                  @include shadow(0 0 0 50px $grey16 inset);
+                }
+              }
+            }
+            .arrow {
+              width: 22px;
+              height: 22px;
+              @include radius(50%);
+              border: none;
+              @include shadow(none);
+              appearance: none;
+              cursor: pointer;
+              background: $orange url("#{$assetPath}right_arrow_white.png")
+                center 7px no-repeat;
+              &.arrow-disable {
+                background: $textGrey url("#{$assetPath}right_arrow_white.png")
+                  center 7px no-repeat;
+                pointer-events: none;
+              }
+            }
+          }
+          .checkbox-list {
+            margin: 0;
+            text-transform: none;
+            .checkmark {
+              border: 1px solid $grey28;
+            }
+          }
+        }
+        .sucess-msg {
+          display: none;
+          padding: 10px 0;
+          .icon {
+            font-weight: bold;
+            @include display-flex();
+            @include flex-align-items(center);
+            text-transform: uppercase;
+            margin-bottom: 7px;
+            img {
+              flex-grow: initial;
+              margin-right: 10px;
+            }
+          }
+          p {
+            margin-bottom: 0 !important;
+            line-height: 1.5;
+          }
+          .edit {
+            margin-left: 5px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .image-block {
+    width: calc(100% - 672px);
+    position: relative;
+    text-align: center;
+    img {
+      padding-right: 20px;
+      max-width: 550px;
+      margin-right: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      @media only screen and (max-width: 1220px) {
+        max-width: 450px;
+      }
+    }
+  }
+
+  .content-block {
+    width: 670px;
+    height: auto !important;
+    .nav-tabs {
+      padding-left: 20px;
+      overflow: hidden;
+      margin-top: 38px;
+      @media screen and (max-width: 767px) {
+        margin-top: 0;
+      }
+    }
+
+    .section-label,
+    .section-title {
+      text-align: left;
+    }
+
+    .ui-tabs-panel {
+      padding: 30px 0;
+    }
+
+    .nav-tabs {
+      @include flex-justify-content(flex-start);
+    }
+
+    #ways-to-bank-tabs {
+      background-color: $white;
+    }
+
+    .way-to-bank-slider {
+      max-width: 365px;
+      margin-left: -15px;
+      .slide {
+        p {
+          font-size: 22px;
+          margin: 0 0 20px 15px;
+          line-height: 26px;
+          color: $darkGrey;
+        }
+        .media {
+          @include mq(tablet) {
+            @include shadow(none);
+          }
+          div {
+            @include shadow(0px 4px 11px rgba(222, 222, 222, 0.3));
+            border-radius: 4px;
+            padding: 0;
+            overflow: hidden;
+            margin: 15px 20px 15px 15px;
+          }
+          img {
+            border-radius: 5px;
+            margin: 0 auto;
+          }
+        }
+      }
+      .slick-dots {
+        text-align: left;
+        margin: 0 0 0 20px;
+        position: relative;
+      }
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1199px) {
+      .ways-to-bank-tabs {
+        .nav-tabs {
+          li {
+            a {
+              padding: 11px 15px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      .ways-to-bank-tabs {
+        .tabs-section {
+          margin: 0 -10px;
+          width: calc(100% + 30px);
+        }
+      }
+    }
+  }
+
+  .app-links {
+    margin-top: 25px;
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      @include radius(50px);
+      overflow: hidden;
+      &:hover {
+        @include shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+      }
+    }
+  }
+
+  .notification-alert {
+    top: 0;
+    padding: 20px 14px;
+    @media screen and (max-width: 768px) {
+      top: 40px !important;
+      position: relative;
+      margin-left: auto;
+      padding: 14px;
+      z-index: 1;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .image-block {
+      width: calc(100% - 552px);
+    }
+    .content-block {
+      width: 550px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .section-inner {
+      padding: 40px 0px;
+      .section-label-new {
+        text-align: left;
+        @include flex-justify-content(flex-start);
+        &::after {
+          display: block;
+        }
+        span {
+          &::after,
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    .tab-content {
+      .tab-pane {
+        min-height: auto;
+      }
+    }
+    .section-inner {
+      padding: 0 0 40px 0px;
+      @include mq(tablet) {
+        padding-bottom: 0;
+      }
+    }
+    .image-block {
+      display: none;
+    }
+    .content-block {
+      padding: 0 20px;
+      width: 100%;
+      .way-to-bank-slider {
+        max-width: 100%;
+        margin: 0;
+        .slick-list.draggable {
+          min-height: auto;
+        }
+        .slide {
+          p {
+            font-size: 16px;
+          }
+          .media {
+            display: block;
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .slick-dots {
+          text-align: center;
+          margin: 10px 0 0 0;
+        }
+      }
+    }
+    .app-links {
+      @include display-flex;
+      @include flex-justify-content(center);
+    }
+    .tab-content {
+      max-width: 100%;
+      .tab-pane {
+        min-height: auto;
+      }
+    }
+  }
+  @include mq(tablet) {
+    .whatsapp-content {
+      padding: 0;
+      .msg-box {
+        padding: 10px 15px;
+      }
+    }
+    .section-label-new {
+      span {
+        &::after,
+        &::before {
+          width: 75px !important;
+        }
+      }
+    }
+    .section-title {
+      text-align: center;
+    }
+  }
+}
+
+/* ways to bank section end */

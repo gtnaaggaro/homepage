@@ -1,0 +1,246 @@
+$brown1: #baa173;
+$brown2: #b6985a;
+$white: #fff;
+$assetPath: "../images/";
+
+/* overwrite */
+.announcement-section {
+	.section-inner {
+		.link {
+			ul {
+				li {
+					&:last-child {
+						a {
+							border-color: $brown1;
+						}
+					}
+					a {
+						color: $brown1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.notification {
+	.notifications-count {
+		background: $brown1;
+	}
+}
+a:hover,
+a:link,
+a:visited {
+	color: $brown1;
+}
+.ic-more:after {
+	background: url("#{$assetPath}icons/more-brown.png") no-repeat;
+}
+
+.ic-btn,
+a.ic-btn:link,
+a.ic-btn:visited {
+	background: $brown1;
+	color: $white;
+	border: 1px solid $brown2;
+	&:hover {
+		background: $brown2;
+		border: 1px solid $brown2;
+	}
+	&.white {
+		color: $brown1;
+		border: 1px solid $brown1;
+		&:hover {
+			background: $brown2;
+			color: $white;
+		}
+	}
+}
+
+.new-header {
+	&.desktop {
+		.menu-level-1-child {
+			&.left-side-menu {
+				ul {
+					li {
+						&.other-menu {
+							&.active,
+							&.current {
+								.link-area {
+									a {
+										background-color: $brown1 !important;
+									}
+									&::before {
+										background: url("#{$assetPath}icons/active-left-brown.png");
+									}
+									&::after {
+										background: url("#{$assetPath}icons/active-right-brown.png");
+									}
+								}
+							}
+
+							&:hover {
+								.link-area {
+									a {
+										color: $brown1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.other-dropdown {
+				background: linear-gradient(159.86deg, $brown1 46%, $brown2 85.09%);
+				.dropdown-inner {
+					.left-block {
+						ul {
+							li {
+								a {
+									color: $white;
+									&.active {
+										color: $brown1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.right-side-menu {
+				.right-side-ul {
+					> li {
+						&.active {
+							span.open-status {
+								background: url("#{$assetPath}/arrow_down_grey.png") no-repeat
+									left center;
+							}
+						}
+						&.languageselect,
+						&.countryselect {
+							&:hover {
+								.drop-select {
+									&::after {
+										background: url("#{$assetPath}/arrow_down_grey.png")
+											no-repeat center;
+									}
+								}
+							}
+						}
+						&.lang-icon {
+							&:hover {
+								a {
+									color: $brown1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.user-login {
+			.ic-btn {
+				background-color: $brown1;
+				border-color: $brown1;
+				&:hover {
+					background-color: $brown2;
+					border-color: $brown2;
+				}
+			}
+		}
+		.new-user-login {
+			.ic-btn {
+			}
+		}
+		.personal-banking {
+			&::after {
+				background: url("../images/arrow_down_brown.png") no-repeat;
+			}
+			&:hover {
+				&::after {
+					background: url("../images/arrow_down_brown.png") no-repeat;
+				}
+			}
+		}
+		.sub-menu-wrapper {
+			.sub-menu-inner {
+				ul {
+					li {
+						a {
+							color: $brown1;
+						}
+						&:hover {
+							background: $brown1;
+						}
+					}
+				}
+			}
+		}
+	}
+	.search {
+		.menu-search-box,
+		.mob-menu-search-box {
+			form {
+				border: 2px solid $brown1;
+				.mic {
+					background: url("#{$assetPath}icons/mic-brown.svg") no-repeat center;
+				}
+				.search-btn {
+					background: url("#{$assetPath}icons/icon_search_brown.svg") no-repeat
+						center;
+				}
+			}
+		}
+	}
+}
+
+.nav-tabs li {
+	&.active {
+		a {
+			background-color: $brown1 !important;
+		}
+		&::before {
+			background: url(#{$assetPath}icons/active-left-m.png);
+		}
+		&::after {
+			background: url(#{$assetPath}icons/active-right-m.png);
+		}
+	}
+}
+
+.slick-dots {
+	li {
+		&.slick-active {
+			background: $brown1 !important;
+			border: 2px solid $brown1 !important;
+		}
+	}
+}
+
+.footer {
+	.footer-inner {
+		.primary {
+			background: $brown1;
+		}
+	}
+}
+
+.breadcrumbs {
+	ul {
+		li {
+			&::before {
+				background: $brown1;
+			}
+		}
+	}
+}
+
+.mCSB_scrollTools {
+	.mCSB_dragger {
+		&:hover {
+			.mCSB_dragger_bar {
+				background-color: $brown1;
+			}
+		}
+	}
+}

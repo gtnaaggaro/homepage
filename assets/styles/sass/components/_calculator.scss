@@ -1,0 +1,648 @@
+/* select-filter */
+.select-filter {
+	@include display-flex;
+	@include flex-justify-content(center);
+	max-width: 730px;
+	width: 100%;
+	margin: 0 auto 5px;
+	@include flex-align-items(baseline);
+	label {
+		margin-right: 30px;
+		font-size: 18px;
+		white-space: nowrap;
+	}
+	.ui-selectmenu-text {
+		font-size: 16px;
+		font-weight: 600;
+		height: 25px;
+		width: 100%;
+	}
+	.ui-selectmenu-button.ui-button {
+		width: auto;
+	}
+	.ui-selectmenu-button-closed,
+	.ui-selectmenu-button-open {
+		border: 1.5px solid $orange;
+		@include radius(3px);
+		padding: 5px 15px 0px;
+	}
+	.ui-selectmenu-button-closed .ui-icon-triangle-1-s,
+	.ui-selectmenu-button-open .ui-icon-triangle-1-s {
+		right: 15px;
+		top: 12px;
+		border-width: 8px;
+	}
+	#ui-id-1-button {
+		margin-right: 25px;
+	}
+	@media only screen and (max-width: 1199px) {
+		max-width: 80%;
+	}
+	@media only screen and (max-width: 992px) {
+		max-width: 100%;
+		margin-bottom: 20px;
+		.ui-button {
+			width: 100% !important;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		display: block;
+		padding: 0 20px;
+	}
+}
+
+.find-right-product-section {
+	background: linear-gradient(
+		175deg,
+		$textGreyLight2 0%,
+		rgba(249, 240, 227, 0) 84.33%
+	);
+	overflow: hidden;
+
+	.ic-btn {
+		margin-right: 36px;
+	}
+	.tab-content {
+		&.product-tab-content {
+			position: relative;
+			iframe {
+				border: none;
+				overflow: hidden;
+			}
+		}
+	}
+	.find-right-product {
+		padding: 15px 0px 0 !important;
+		height: auto;
+		@media screen and (max-width: 991px) {
+			padding: 40px 0 0 !important;
+		}
+		&.find-right-product-iframe {
+			width: 100%;
+			max-width: 100% !important;
+			padding: 15px 0 0 !important;
+			height: auto;
+		}
+	}
+
+	.tabpanel-inner {
+		@include display-flex;
+		@include flex-wrap(wrap);
+	}
+	.product-tabs {
+		@include display-flex();
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 37%;
+			max-width: 450px;
+			height: 40px;
+			margin-right: 40px;
+		}
+		.nav-tabs {
+			li {
+				a {
+					height: 40px;
+				}
+			}
+		}
+	}
+	.left-panel {
+		width: 37%;
+		max-width: 450px;
+		.card-panel {
+			border: 1px solid transparent;
+			@include radius(10px);
+			overflow: hidden;
+			.card-panel-top {
+				img {
+					width: 100%;
+				}
+			}
+			.card-panel-bottom {
+				background-color: $orange;
+				color: $white;
+				padding: 30px;
+				min-height: 260px;
+				h3 {
+					color: $white;
+					margin-bottom: 20px;
+					font-weight: 400;
+				}
+				p {
+					margin-bottom: 20px;
+					line-height: 24px;
+					font-size: 15px;
+					letter-spacing: 0.02em;
+				}
+				ul {
+					padding-left: 15px;
+					li {
+						list-style-type: disc;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	.right-panel {
+		width: 63%;
+		.tab-content {
+			background-color: $white;
+			min-height: 500px;
+
+			&:before {
+				content: "";
+				width: 100%;
+				height: calc(100% - 146px);
+				background-color: $white;
+				position: absolute;
+				z-index: -1;
+				top: 96px;
+				@media only screen and (max-width: 1174px) {
+					margin-left: -166px;
+				}
+				@media only screen and (max-width: 1087px) {
+					margin-left: -150px;
+				}
+				@media only screen and (max-width: 992px) {
+					top: 0;
+					margin-left: 0;
+					left: 0;
+				}
+			}
+		}
+		.tab-pane {
+			padding-top: 65px;
+			padding-left: 40px;
+			h3 {
+				font-weight: 300;
+				margin-bottom: 20px;
+				line-height: 33px;
+				@media only screen and (max-width: 991px) {
+					font-size: 26px;
+					line-height: 138%;
+					margin-bottom: 10px;
+				}
+			}
+			.other-detail-wrapper {
+				@include display-flex;
+				@include flex-wrap(wrap);
+				.amount-wrapper {
+					@include display-flex;
+					@include flex-wrap(wrap);
+				}
+			}
+			.buttons-group {
+				margin-bottom: 40px;
+				.ic-btn {
+					margin-right: 25px;
+				}
+			}
+			.loan-forms {
+				@include display-flex;
+				vertical-align: middle;
+				margin-top: 32px;
+				.text-left {
+					max-width: 200px;
+					margin-right: 15px;
+				}
+				.content {
+					max-width: 310px;
+					padding: 0 15px 0 0;
+					.form-slider {
+						.form-group {
+							position: relative;
+							padding-bottom: 5px;
+							.form-group-inner {
+								@include display-flex;
+								padding: 5px 10px 8px 0;
+								border-bottom: 0.5px solid $textGrey;
+								vertical-align: middle;
+								align-items: center;
+								@include flex-justify-content(flex-end);
+								@include flex-align-items(flex-end);
+								margin-bottom: 2px;
+								&.error {
+									border-bottom: 0.5px solid $maroon;
+								}
+								.icon {
+									margin-right: 11px;
+									width: auto;
+									float: left;
+								}
+								.input-box {
+									float: right;
+									width: 90%;
+									input {
+										border: 0;
+										color: $textGreyLight;
+										max-width: 300px;
+										width: 100%;
+										&.error {
+											color: $red1;
+										}
+										&::placeholder {
+											color: $textGreyLight;
+										}
+										&::-ms-clear {
+											display: none;
+										}
+										&:-internal-autofill-selected,
+										&:-webkit-autofill,
+										&:-webkit-autofill:hover,
+										&:-webkit-autofill:focus &:-webkit-autofill {
+											@include shadow(0 0 0 50px white inset);
+										}
+									}
+								}
+							}
+							.error-msg {
+								position: absolute;
+								bottom: -13px;
+								color: $textGreyLight;
+								font-size: 12px;
+								line-height: 14px;
+							}
+							.success-message {
+								background: $grey11;
+								@include display-flex();
+								@include flex-align-items(center);
+								padding: 6px 13px 5px;
+								border-bottom: 0.5px solid $green1;
+								img {
+									flex: 0 1 auto;
+								}
+								p {
+									margin-left: 15px;
+									max-width: 180px;
+									font-weight: bold;
+								}
+							}
+						}
+						.slick-dots {
+							position: relative;
+							bottom: 0;
+							margin-top: 0;
+							padding: 0;
+							li {
+								&:last-child {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+				.slick-disabled {
+					visibility: hidden;
+				}
+				.slick-arrow {
+					width: 22px;
+					height: 22px;
+					&.slick-prev {
+						background: $orange url("#{$assetPath}left_arrow_orange.png") center
+							center no-repeat !important;
+						left: -53px;
+						top: 5px;
+						border: 0;
+						display: none !important;
+						&:hover {
+							border: 0;
+						}
+					}
+					&.slick-next {
+						background: $orange url("#{$assetPath}right_arrow_white.png") center
+							center no-repeat !important;
+						right: -8px;
+						top: 5px;
+						border: 0;
+						&:hover {
+							border: 0;
+						}
+					}
+					&.arrow-disable {
+						background: $textGrey url("#{$assetPath}right_arrow_white.png")
+							center center no-repeat !important;
+						pointer-events: none;
+					}
+				}
+				.slick-dots {
+					padding-left: 5px;
+					text-align: left;
+					bottom: -27px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 1279px) {
+		.right-panel {
+			.tab-content {
+				min-height: 660px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1199px) {
+		.left-panel {
+			.card-panel {
+				.card-panel-bottom {
+					padding: 23px 20px 30px;
+					min-height: auto;
+				}
+			}
+		}
+		.right-panel {
+			padding-left: 10px;
+			.tab-pane {
+				.other-detail-wrapper {
+					display: block;
+					.tenure-section,
+					.amount-wrapper {
+						width: 100%;
+						margin-bottom: 20px;
+					}
+					.tenure {
+						width: 50%;
+						min-width: auto;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (min-width: 992px) and (max-width: 1199px) {
+		.product-tabs {
+			&::before {
+				width: 30%;
+			}
+		}
+		.left-panel {
+			width: 30%;
+		}
+		.right-panel {
+			width: 70%;
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		.ic-btn {
+			margin-right: 0;
+		}
+		.tabpanel-inner {
+			display: block;
+			position: relative;
+		}
+		.product-tabs {
+			position: relative;
+			&::before {
+				display: none;
+			}
+			.nav-tabs {
+				@include flex-justify-content(flex-start);
+			}
+		}
+		.right-panel,
+		.left-panel {
+			width: 100%;
+			max-width: 100%;
+			flex-basis: 100%;
+			overflow: hidden;
+			padding: 0 20px;
+		}
+		.left-panel {
+			margin: 20px 0;
+			h3 {
+				font-size: 26px;
+				line-height: 138%;
+			}
+		}
+		.right-panel {
+			&:before,
+			&:after {
+				width: 20px;
+			}
+			.tab-pane {
+				padding: 0px;
+				h3 {
+					font-size: 26px;
+					line-height: 138%;
+				}
+				.loan-forms {
+					margin: -35px -20px 0;
+					padding: 85px 20px 40px;
+					background: $grey17;
+					.content {
+						padding: 0 20px 0 0;
+						max-width: 300px;
+						width: 100%;
+					}
+					.text-left {
+						width: 100%;
+						margin-bottom: 20px;
+					}
+					.form-slider {
+						.form-group {
+							.input-box {
+								float: right;
+								width: 93%;
+								input {
+									background: transparent;
+								}
+							}
+						}
+					}
+					.slick-arrow.slick-prev {
+						left: -42px;
+					}
+				}
+				.card-panel {
+					margin: 20px 0;
+					@include radius(10px);
+					overflow: hidden;
+
+					.card-panel-top {
+						img {
+							width: 100%;
+						}
+					}
+					.card-panel-bottom {
+						background-color: $orange;
+						color: $white;
+						padding: 23px 30px 30px;
+						h3 {
+							color: $white;
+							margin-bottom: 20px;
+							font-weight: 400;
+						}
+						p {
+							margin-bottom: 20px;
+							line-height: 24px;
+							font-size: 15px;
+							letter-spacing: 0.02em;
+						}
+						ul {
+							padding-left: 15px;
+							li {
+								list-style-type: disc;
+								margin-bottom: 10px;
+								&:last-child {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+			.tab-content {
+				min-height: auto;
+				padding: 0;
+			}
+		}
+		.select-filter {
+			padding: 0 20px 10px;
+			margin-bottom: 0;
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		.right-panel {
+			.tab-pane {
+				.loan-forms {
+					display: block;
+				}
+				.buttons-group {
+					.ic-btn {
+						min-width: 150px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.preapproved {
+	label {
+		margin-bottom: 10px;
+		display: block;
+	}
+	.loan-amt-display {
+		font-size: 30px;
+		font-weight: 500;
+		line-height: normal;
+	}
+	.input-box {
+		input {
+			width: 100%;
+		}
+		input[type="range"] {
+			background-color: transparent;
+		}
+	}
+	.range-figures {
+		ul {
+			margin: 0;
+			padding: 0;
+			@include display-flex;
+			@include flex-justify-content(space-between);
+			li {
+				color: #a6a6a6;
+			}
+		}
+	}
+}
+
+.other-detail-wrapper {
+	margin: 15px 0 30px;
+	@include flex-justify-content(space-between);
+	@include flex-align-items(center);
+	.tenure-section {
+		@include display-flex;
+		@include flex-justify-content(space-between);
+		width: 40%;
+		.tenure {
+			min-width: 145px;
+			padding: 20px 20px 0 0;
+			label {
+				margin-bottom: 7px;
+				display: block;
+				line-height: normal;
+			}
+			.select-tenure,
+			.select-interes-rate {
+				.tenure-display,
+				.interest-display {
+					font-size: 26px;
+					line-height: normal;
+				}
+			}
+		}
+	}
+	.amount-wrapper {
+		width: 60%;
+		background: #fff3e9;
+		@include radius(10px);
+		.emi-amount {
+			padding: 10px 20px 15px;
+			width: 50%;
+			min-width: 210px;
+
+			label {
+				font-weight: 600;
+				display: block;
+				margin-bottom: 5px;
+				line-height: normal;
+			}
+			.finalEmiAmt,
+			.interestPayble,
+			sup {
+				font-size: 26px;
+				line-height: normal;
+			}
+			sup {
+				// top: -2px;
+				font-size: 20px;
+			}
+			.finalEmiAmt {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.carloan {
+	.ic-more {
+		padding-left: 20px;
+		@include mq(tablet) {
+			padding-left: 20px;
+		}
+	}
+}
+
+input:focus {
+	background-color: white !important;
+}
+
+.number-holder {
+	position: relative;
+	.checkbox-list {
+		position: absolute;
+		right: 30px;
+		top: 10px;
+		padding: 0;
+		margin: 0;
+		input {
+			top: 2px;
+			z-index: 1;
+		}
+	}
+	@media screen and (min-width: 577px) {
+		.border-left {
+			border-left: 1px solid $darkGrey8;
+		}
+	}
+}

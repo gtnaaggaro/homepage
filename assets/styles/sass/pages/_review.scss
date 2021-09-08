@@ -1,0 +1,319 @@
+.review-page {
+	&.filter-section {
+		background: $grey4;
+		.filter-content {
+			width: 100%;
+		}
+		.filter-top {
+			.sort-tools {
+				position: relative;
+				.title {
+					position: relative;
+					&:after {
+						content: "";
+						position: absolute;
+						border-left: 1px rgba(0, 0, 0, 0.3) solid;
+						top: 3px;
+						right: -12px;
+						height: 60%;
+						margin-top: auto;
+						margin-bottom: auto;
+					}
+				}
+				.sort-dropdown {
+					background: transparent;
+					span {
+						background: transparent;
+					}
+				}
+			}
+		}
+	}
+
+	.section-title {
+		letter-spacing: -0.01em;
+		text-transform: capitalize;
+		color: $blue;
+	}
+	.filter-top-tool {
+		.button-group {
+			margin-right: 60px;
+			.review-btn {
+				outline: none;
+			}
+		}
+	}
+	.notification-alert {
+		&.apply-now {
+			top: 380px;
+			z-index: 1;
+			max-width: 138px;
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+	@include mq(tablet) {
+		margin-top: 112px;
+		.filter-inner-container {
+			&.active {
+				margin-top: 50px;
+				.banner-card {
+					width: calc(100% - 40px);
+					margin: 30px auto 0;
+				}
+			}
+			.filter-sticky {
+				top: 110px;
+			}
+		}
+		.filter-top-tool {
+			.button-group {
+				margin-right: 0px;
+			}
+		}
+		&.filter-section {
+			.filter-top {
+				&.filter-sticky {
+					.section-title {
+						margin-bottom: 0;
+					}
+					.filter-inner {
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	@include mq(phablet) {
+		&.filter-section {
+			.filter-top {
+				.filter-inner {
+					@include flex-direction(column);
+					@include flex-align-items(flex-start);
+				}
+			}
+			.filter-top-tool {
+				margin: 10px 0 0 0 !important;
+			}
+		}
+	}
+}
+.review-card-lists {
+	.card-loading {
+		min-height: 80px;
+		background: url("#{$assetPath}icons/loader.gif") no-repeat center;
+		background-size: 80px;
+		margin-bottom: 40px;
+		.card-list {
+			opacity: 0;
+		}
+	}
+
+	.card-list-wraper {
+		margin-bottom: 20px;
+		&.hidden-card {
+			display: none;
+			.card-list {
+				opacity: 0;
+			}
+		}
+		&.auto-height {
+			.card-list {
+				opacity: 1;
+			}
+		}
+	}
+	.card-list {
+		position: relative;
+		background: $white;
+		border: 0.8px solid $grey9;
+		padding: 25px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		@include shadow(0px 4px 15px rgba(117, 117, 117, 0.06));
+		border-radius: 8px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.card-icon {
+			background: url("../images/icons/user-icon-orange-bg.svg") no-repeat;
+			margin-right: 12px;
+			width: 35px;
+			height: 35px;
+			@include radius(50%);
+		}
+		.card-img {
+			img {
+				width: 100%;
+			}
+		}
+		.content {
+			> h5 {
+				font-weight: 800;
+				font-size: 16px;
+				margin-bottom: 10px;
+				a {
+					color: $textGrey;
+				}
+			}
+			> p {
+				font-size: 14px;
+				line-height: 21px;
+				color: $grey5;
+			}
+			.card-top-text {
+				@include display-flex();
+				@include flex-align-items(center);
+				h5 {
+					font-size: 16px;
+					line-height: 24px;
+					letter-spacing: -0.01em;
+					text-transform: capitalize;
+					color: $grey3;
+					margin-bottom: 3px;
+				}
+				.star-review {
+					margin-left: auto;
+					position: relative;
+					span {
+						display: inline-block;
+						cursor: pointer;
+						background-image: url("../images/saving-account/comparing-cards/orange-star-empty.png");
+						background-size: 15px;
+						background-repeat: no-repeat;
+						overflow: hidden;
+						width: 18px;
+						height: 17px;
+						text-indent: -9999999px;
+
+						&.checked {
+							background-image: url("../images/icons/saving-account/star.svg");
+						}
+
+						&:not(:last-child) {
+							margin-right: 1px;
+						}
+					}
+				}
+			}
+			.card-middel-text {
+				width: 80%;
+				p {
+					font-size: 14px;
+					line-height: 21px;
+					color: $grey30;
+				}
+			}
+			.card-bottom-text {
+				@include display-flex();
+				@include flex-align-items(center);
+				margin-top: 20px;
+				.card-date {
+					@include display-flex();
+					@include flex-align-items(center);
+					line-height: 17px;
+					font-size: 12px;
+					.name {
+						color: $darkGrey;
+						font-weight: 600;
+						margin-right: 13px;
+					}
+					.date {
+						color: $darkGrey8;
+					}
+				}
+				.social-share {
+					margin-left: auto;
+					position: relative;
+					@include display-flex();
+					@include flex-align-items(center);
+					.count {
+						font-size: 14px;
+						line-height: 23px;
+						color: $grey5;
+						padding-left: 7px;
+					}
+					.icon {
+						width: 20px;
+						height: 19px;
+						display: block;
+						@include flex-align-items(center);
+					}
+					.social-like {
+						@include display-flex();
+						.like {
+							background: url("../images/icons/icon-like.svg") no-repeat left;
+						}
+					}
+					.social-dislike {
+						@include display-flex();
+						margin-right: 35px;
+						.dislike {
+							background: url("../images/icons/icon-dislike.svg") no-repeat left;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.horizontal-view {
+		.card-list {
+			@include display-flex();
+			.content {
+				width: calc(100% - 45px);
+			}
+		}
+	}
+
+	@include mq(tablet) {
+		.card-list {
+			padding: 15px 15px 20px;
+			.card-bottom-text {
+				margin-top: 10px;
+			}
+		}
+	}
+	@include mq(phablet) {
+		.card-list {
+			.content {
+				.card-top-text {
+					@include flex-direction(column);
+					@include flex-align-items(flex-start);
+					.star-review {
+						margin-left: 0 !important;
+					}
+				}
+
+				.card-middel-text {
+					width: 100%;
+					margin-bottom: 24px;
+				}
+				.card-bottom-text {
+					margin-top: 10px;
+					@include flex-direction(column);
+					@include flex-align-items(flex-start);
+					.card-date {
+						margin-bottom: 10px;
+					}
+					.social-share {
+						margin-left: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}
+.customer-review-pop-page {
+	@include mq(tablet) {
+		&.review-popup-section {
+			&.customer-review-pop-up {
+				top: 10px;
+			}
+		}
+	}
+}
+

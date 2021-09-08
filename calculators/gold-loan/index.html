@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="ICICI bank website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ICICI Bank</title>
+  <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="../assets/styles/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/styles/bootstrap-grid.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/styles/animate.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/styles/input_range_new.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/styles/style.css" />
+</head>
+
+<body>
+  <div class="section calculators-section tabs-two-column">
+    <div class="section-inner">
+      <div class="tabpanel-inner">
+        <div class="product-tabs">
+          <ul class="nav nav-tabs" role="tablist" id="myTab1">
+            <li role="presentation" class="active">
+              <a href="#personal-loan" aria-controls="personal-loan" role="tab" data-toggle="tab">
+                <span class="icon n-icon"><img src="../assets/images/loan/ic_personal--orange.svg" alt="" /></span>
+                <span class="icon h-icon"><img src="../assets/images/loan/ic_personal--white.svg" alt="" /></span><span
+                  class="title">Personal Loan</span>
+              </a>
+            </li>
+            <li role="presentation">
+              <a href="#gold-loan" aria-controls="gold-loan" role="tab" data-toggle="tab">
+                <span class="icon n-icon"><img src="../assets/images/loan/ic_gold--orange.svg" alt="" /></span>
+                <span class="icon h-icon"><img src="../assets/images/loan/ic_gold--white.svg" alt="" /></span><span
+                  class="title">Gold Loan</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="left-panel">
+          <div class="card-panel">
+            <div class="card-panel-top">
+              <img src="../assets/images/loan/personal-loan-img.jpg" alt="" />
+            </div>
+            <div class="card-panel-bottom">
+              <!-- 13/10/2020 update h3 to h2 tag -->
+              <h2>Personal Loan</h2>
+              <p>
+                A Personal Loan from ICICI Bank helps you meet your diverse
+                financial needs; you can avail of loan up to Rs 20 lakh and
+                meet the personal exigency that can crop up anytime in life.
+              </p>
+              <ul>
+                <li>Interest Rate 11.25%</li>
+                <li>3 second disbursal</li>
+                <li>Minimum documentation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-panel" style="display: none;">
+            <div class="card-panel-top">
+              <img src="../assets/images/loan/gold-loan-img.jpg" alt="" />
+            </div>
+            <div class="card-panel-bottom">
+              <!-- 13/10/2020 update h3 to h2 tag -->
+              <h2>Gold Loan</h2>
+              <p>
+                Get instant gold loan by bringing your gold jewellery at any
+                branch of ICICI Bank.
+              </p>
+              <ul>
+                <li>Instant Loan Across The Table</li>
+                <li>Simple & Easy Documentation</li>
+                <li>Complete safety of jewels</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="right-panel">
+          <div class="tab-content" data-wow-delay="0.5s" id="">
+            <div role="tabpanel" class="tab-pane active animated fadeIn" id="personal-loan">
+              <div class="calculator-container width-728" style="display: block;">
+                <div class="loan-container">
+                  <h3>Calculate EMI</h3>
+                  <div class="row-1 preapproved mb-50 mb-sm-30 row">
+                    <div class="col-12">
+                      <label>Loan Amount</label>
+                      <div class="select-loan-amt">
+                        <div class="loan-amt-input">
+                          <!-- 12/08 id update  -->
+                          <input id="loan-amt-input_pl" onfocusout='addCommas("loan-amt-input_pl")' value="800000"
+                            maxlength="9" class="font-40 font-sm-30" onkeypress="validateNumberAndDecimals()" />
+                        </div>
+                        <div class="input-box">
+                          <!-- 12/08 id update  -->
+                          <input id="loan-amt_pl" name="loan-amt_pl" type="range" min="25000" max="5000000"
+                            value="800000" />
+                        </div>
+                        <div class="range-figures">
+                          <ul>
+                            <li><span>&#8377; 25,000</span></li>
+                            <li><span>&#8377; 50,00,000</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- 12/08 class update  -->
+                      <div class="error error-loan-amt_pl"></div>
+                    </div>
+                  </div>
+
+                  <div class="row-2 preapproved mb-50 row mb-sm-30">
+                    <div class="col-md-6 col-12">
+                      <label>Tenure (months)</label>
+                      <div class="select-tenure-months">
+                        <div class="tenure-months-input">
+                          <!-- 12/08 id update  -->
+                          <input id="tenure-months-input_pl" value="84" maxlength="2" class="font-40 font-sm-30"
+                            onkeypress="validateNumberAndDecimals()" />
+                        </div>
+                        <div class="input-box">
+                          <!-- 12/08 id update  -->
+                          <input id="tenure-months_pl" name="tenure-months_pl" type="range" min="12" max="84"
+                            value="84" />
+                        </div>
+                        <div class="range-figures">
+                          <ul>
+                            <li><span>12 M</span></li>
+                            <li><span>84 M</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- 12/08 class update  -->
+                      <div class="error error-tenure-months_pl"></div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <label>Interest Rate (In Percentage)</label>
+                      <div class="select-interest-rate">
+                        <div class="interest-rate-input">
+                          <div class="text-in-line">
+                            <!-- 12/08 id update  -->
+                            <input id="interest-rate-input_pl" value="9.4" maxlength="5" class="font-40 font-sm-30"
+                              onkeypress="validateNumberAndDecimals()" />
+                          </div>
+                        </div>
+                        <div class="input-box">
+                          <!-- 12/08 id update  -->
+                          <input id="interest-rate_pl" name="interest-rate_pl" type="range" min="0"
+                            onchange="validateFormAndCalculatePl()" />
+                        </div>
+                        <div class="range-figures">
+                          <ul>
+                            <li><span>9% PA</span></li>
+                            <li><span>19.5% PA</span></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- 12/08 clas update  -->
+                      <div class="error error-interest-rate_pl"></div>
+                    </div>
+                  </div>
+
+                  <div class="row-3 light-orange number-holder mb-40 mb-sm-30 width-500">
+                    <div class="row">
+                      <div class="col-md-6 col-12 mb-sm-20">
+                        <label>EMI Amount</label>
+                        <div class="text-in-line">
+                          <!-- 12/08 id update  -->
+                          <p id="emi_amt_pl" class="font-35 font-sm-30 fw-700"></p>
+                          <span class="font-35 font-sm-30 fw-700">*</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12 mb-sm-20">
+                        <label>Interest Payable</label>
+                        <div class="text-in-line">
+                          <!-- 12/08 id update  -->
+                          <p id="interest_payable_pl" class="font-35 font-sm-30 fw-300"></p>
+                          <span class="font-35 font-sm-30 fw-300">*</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="buttons">
+                    <a href="" class="ic-btn" id="btn-submit">
+                      Disburse Now
+                    </a>
+                    <a href="" class="ic-more" target="_blank">
+                      KNOW MORE
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane animated fadeIn" id="gold-loan">
+              <div class="calculator-container width-728" style="display: block;">
+                <h3>Calculate your eligible gold loan amount</h3>
+                <div class="row row-1 mb-50 mb-sm-30">
+                  <div class="col-md-4 col-12 mb-sm-30">
+                    <label>Tenure (In Months)</label>
+                    <div class="radio-style-box">
+                      <div class="radio-wrap">
+                        <input type="radio" name="tenure_gold" value="6" id="tenure_gold" checked
+                          oninput="validateFormAndCalculateGoldLoan()" />
+                        <span for="tenure_gold" class="checkmark">6</span>
+                      </div>
+                      <div class="radio-wrap">
+                        <input type="radio" name="tenure_gold" value="12" id="tenure_gold"
+                          oninput="validateFormAndCalculateGoldLoan()" />
+                        <span for="tenure_gold" class="checkmark">12</span>
+                      </div>
+                    </div>
+                    <div class="error error-tenure_gold"></div>
+                  </div>
+                  <div class="col-md-4 col-12 preapproved">
+                    <label>No. Of Ornaments</label>
+                    <!-- 06/07 select-oranament-no Html update -->
+                    <div class="select-oranament-no cal-dropdown">
+                      <select id="no-of-ornaments">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <!-- 29/07/2020 -->
+                        <option value="7">> 6</option>
+                        <!-- 29/07/2020 -->
+                      </select>
+                    </div>
+                    <div class="error error-oranament-no"></div>
+                  </div>
+                </div>
+                <div class="row row-2 mb-30 mb-sm-30">
+                  <div class="col-12">
+                    <label>Carat (in K) & Weight (in Grams)</label>
+                    <!-- 06/07 table-wrapper Html update -->
+                    <!-- 29/07/2020 -->
+                    <div class="table-wrapper">
+                      <div class="list-item">
+                        <div class="caret1 cal-dropdown">
+                          <select id="caret1">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+                          <div class="error error-caret1"></div>
+                        </div>
+
+                        <div class="weight-grams weight-grams1">
+                          <input id="weight-grams1" value="20" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+                          <div class="error error-weight1"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt1" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                      <div class="list-item">
+                        <div class="caret2 cal-dropdown">
+                          <select id="caret2">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+                          <div class="error error-caret2"></div>
+                        </div>
+                        <div class="weight-grams weight-grams2">
+                          <input id="weight-grams2" value="12" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+                          <div class="error error-weight2"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt2" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                      <div class="list-item">
+                        <div class="caret3 cal-dropdown">
+                          <select id="caret3">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+                          <div class="error error-caret3"></div>
+                        </div>
+                        <div class="weight-grams weight-grams3">
+                          <input id="weight-grams3" value="10" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+                          <div class="error error-weight3"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt3" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                      <div class="list-item">
+                        <div class="caret4 cal-dropdown">
+                          <select id="caret4">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+                          <div class="error error-caret4"></div>
+                        </div>
+                        <div class="weight-grams weight-grams4">
+                          <input id="weight-grams4" value="12" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+                          <div class="error error-weight4"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt4" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                      <div class="list-item">
+                        <div class="caret5 cal-dropdown">
+                          <select id="caret5">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+
+                          <div class="error error-caret5"></div>
+                        </div>
+                        <div class="weight-grams weight-grams5">
+                          <input id="weight-grams5" value="30" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+                          <div class="error error-weight5"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt5" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                      <div class="list-item">
+                        <div class="caret6 cal-dropdown">
+                          <select id="caret6">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+                          <div class="error error-caret6"></div>
+                        </div>
+                        <div class="weight-grams weight-grams6">
+                          <input id="weight-grams6" value="50" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+
+                          <div class="error error-weight6"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt6" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                      <div class="list-item">
+                        <div class="caret7 cal-dropdown">
+                          <select id="caret7">
+                            <option value="24">24</option>
+                            <option value="22">22</option>
+                            <option value="21">21</option>
+                            <option value="20">20</option>
+                            <option value="19">19</option>
+                            <option value="18">18</option>
+                          </select>
+                          <div class="error error-caret7"></div>
+                        </div>
+                        <div class="weight-grams weight-grams7">
+                          <input id="weight-grams7" value="50" class="input-style orange-border"
+                            oninput="validateFormAndCalculateGoldLoan()" onkeypress="validateNumberAndDecimals()"
+                            maxlength="3" />
+
+                          <div class="error error-weight7"></div>
+                        </div>
+                        <div class="row-calculation">
+                          <p id="eliLoanAmt7" class="font-18 fw-500"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="article-disclaimer mb-20 mb-sm-20">
+                      Disclaimer: If number of articles are greater than 6,
+                      then please mention the approximate carat and grams in
+                      the last row for remaining articles.
+                    </p>
+                    <!-- 29/07/2020 -->
+                  </div>
+                </div>
+                <div class="premium row-2 mb-40 mb-sm-30 light-orange number-holder width-300 full-width-mb">
+                  <div class="row">
+                    <div class="col-12">
+                      <label>Eligible Gold Loan Amount</label>
+                      <div class="text-in-line">
+                        <!-- 12/08 id update  -->
+                        <p id="eligible_loan_amt_gl" class="font-30 fw-700"></p>
+                        <span class="font-30 fw-700">*</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                  <a href="" class="ic-btn" id="btn-submit">
+                    Apply Now
+                  </a>
+                  <a href="" class="ic-more" target="_blank">
+                    KNOW MORE
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- javascript files -->
+  <script src="../assets/scripts/libs/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../assets/scripts/libs/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../assets/scripts/libs/jquery-ui.min.js" type="text/javascript"></script>
+  <!-- 10/08/2020 iframeResizer file -->
+  <script src="../assets/scripts/libs/iframeResizer.contentWindow.min.js" type="text/javascript"></script>
+
+  <script src="../assets/scripts/common.js" type="text/javascript"></script>
+  <!-- <script src="../assets/scripts/calculator.js" type="text/javascript"></script> -->
+  <script src="../assets/scripts/tabs/tabs.js" type="text/javascript"></script>
+  <!-- 29/07/2020 -->
+  <script src="../assets/scripts/personalLoanG.js" type="text/javascript"></script>
+  <!-- 29/07/2020 -->
+  <script src="../assets/scripts/goldloan.js" type="text/javascript"></script>
+</body>
+
+</html>

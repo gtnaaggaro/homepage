@@ -1,0 +1,205 @@
+.leadform-popup {
+	position: fixed;
+	width: 100%;
+    height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 10000;
+	overflow-y: auto;
+
+	.leadform-popup-inner {
+		position: relative;
+		width: 93%;
+		max-width: 760px;
+        max-height: 550px;;
+		background: $white;
+		margin: 30px auto 0;
+		margin-bottom: 40px;
+		padding: 20px;
+		@include radius(10px);
+	}
+
+    .popup-close {
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        background: $orange;
+        border-radius: 50%;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        text-align: center;
+        line-height: 34px;
+
+        img {
+            vertical-align: middle;
+        }
+    }
+
+
+    .lead-capture-form {
+        @include display-flex();
+        margin: 0 -20px -35px;
+        padding: 35px 45px;
+        border-radius: 0 0 10px 10px;
+
+        .media {
+            width: 285px;
+
+            img,  .iframe-video {
+                margin-bottom: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+
+        .callback-form {
+            width: calc(100% - 285px);
+            @include shadow(none);
+            padding: 0 0 0 50px;          
+
+            .form-group {
+                display: block;
+                margin: 0;
+
+                .input-group  {
+                    width: 100%;
+                    margin: 0 0 15px;
+                    
+                    .error-txt {
+                        font-size: 10px;
+                        bottom: -20px;
+                    }
+
+                    .input-box {
+                        input {
+                            color: $textGrey;
+                            background: transparent !important;
+                            @include shadow(0 0 0 50px #fff7eb inset);
+                        }
+                    }
+                }
+            }
+
+            .button-group {
+                margin-top: 32px;
+                text-align: right;
+            }
+
+            .success-txt {
+                position: static;
+                padding: 0;
+
+                 img  {
+                    margin: 25px 0 20px;
+                }
+
+                p {
+                    margin-bottom: 0;
+
+                    &.small {
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+
+            &.fullwidth {
+                padding: 0 30px;
+                width: 100%;
+
+                .button-group {
+                    @include display-flex();
+                    text-align: left;
+
+                    p {
+                        font-size: 12px;
+                        line-height: 15px;
+                    }
+
+                    div {
+                        &:first-child {
+                            max-width: 290px;
+                            margin-right: 20px;
+                        }
+
+                        &:last-child {
+                            margin-left: auto;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        &.success {
+            background: $white !important;
+            .media {
+                display: none;
+            }
+
+            form {
+                display: none;
+            }
+
+            .callback-form {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+
+    .popup-heading {        
+        max-width: 475px;
+        margin: 0 auto 15px;
+        text-align: center;
+
+        .section-title {
+            margin-bottom: 10px;
+            text-align: center;
+        }        
+    }
+
+    @media screen and (max-width: 767px) {
+        .lead-capture-form {
+            display: block;
+            padding: 20px;
+            
+            .media {
+                width: 100%;
+                img, .iframe-video {
+                    width: 100%;
+                }
+            }
+
+            .callback-form {
+                width: 100%;
+                padding: 0;
+                margin-top: 20px;
+                &.fullwidth{
+                    .button-group{
+                        @include flex-direction(column);
+                        div {
+                            &:first-child {
+                                max-width: none;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .popup-close {
+            top: -15px;
+            right: -10px;
+        }
+    }
+}

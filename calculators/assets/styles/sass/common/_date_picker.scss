@@ -1,0 +1,17 @@
+.date-picker {
+  input,
+  input[type="text"],
+  input[type="date"] {
+    appearance: none;
+    width: 100%;
+    line-height: 36px;
+    font-size: 22px;
+    border: 1px solid #f37e20;
+    background: url(../images/icons/date-picker.png) no-repeat center;
+    background-position: calc(100% - 10px);
+    background-size: 18px 20px;
+    cursor: pointer;
+    padding-right: 35px;
+    padding-left: 10px;
+  }
+}

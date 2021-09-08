@@ -1,0 +1,482 @@
+@import "sass/components/mixins";
+@import "sass/components/wealth-variable";
+@import "sass/layout/custom";
+@import "sass/layout/header";
+@import "sass/components/slider";
+@import "sass/components/cards";
+@import "sass/components/tabs";
+@import "sass/components/select";
+@import "sass/components/calculator";
+@import "sass/layout/header-notification";
+@import "sass/components/notification";
+@import "sass/layout/footer";
+@import "sass/pages/home";
+@import "sass/pages/life-stages";
+
+/* overwrite */
+.announcement-section {
+	.section-inner {
+		.link {
+			ul {
+				li {
+					&:last-child {
+						a {
+							border-color: $maroon;
+						}
+					}
+					a {
+						color: $maroon;
+					}
+				}
+			}
+		}
+	}
+}
+
+.notification {
+	.notifications-count {
+		background: $maroon;
+	}
+}
+
+.ic-more:after {
+	background: url("#{$assetPath}icons/more-b.png") no-repeat;
+}
+
+.ic-btn.white,
+a.ic-btn:link.white,
+a.ic-btn:visited.white {
+	background: $darkGrey4;
+	color: $white;
+	&:hover {
+		background: $maroon1;
+		border: 1px solid $maroon1;
+	}
+}
+.slick-arrow {
+	&.slick-prev {
+		background: url("../images/left_arrow_b.png") no-repeat 14px 7px;
+	}
+	&.slick-next {
+		background: url("../images/left_arrow_b.png") no-repeat 14px 7px;
+	}
+}
+
+.slick-dots {
+	li {
+		&.slick-active {
+			background: $maroon1 !important;
+			border: 2px solid $maroon1 !important;
+		}
+	}
+}
+.left-arrow:before {
+	background: url("../images/left_arrow_b.png") no-repeat center center;
+}
+.right-arrow:before {
+	background: url("../images/right_arrow_b.png") no-repeat center center;
+}
+
+.new-header {
+	&.desktop {
+		.logo {
+			img {
+				max-width: 170px;
+			}
+		}
+		.header-menu {
+			ul {
+				li {
+					&:hover {
+						span {
+							&.open-status {
+								background: url("#{$assetPath}arrow_down_maroon.png") no-repeat
+									center;
+							}
+						}
+					}
+				}
+			}
+		}
+		.menu-level-1 {
+			background: $darkGrey4;
+		}
+		.menu-level-1-child {
+			&.left-side-menu {
+				ul {
+					li {
+						&.active {
+							> a {
+								color: $maroon;
+							}
+						}
+						&.other-menu {
+							.link-area,
+							&:hover .link-area {
+								.open-status {
+									background: url("#{$assetPath}icons/plus-icon-m.svg")
+										no-repeat center !important;
+								}
+							}
+							&.active,
+							&.current {
+								.link-area {
+									a {
+										background: $white !important;
+										color: $maroon1 !important;
+									}
+									&::before {
+										background: url("#{$assetPath}icons/active-left-w.png");
+									}
+									&::after {
+										background: url("#{$assetPath}icons/active-right-w.png");
+									}
+								}
+							}
+							&.current,
+							&.current:hover {
+								.link-area {
+									.open-status {
+										background: url("#{$assetPath}icons/plus-icon-m.svg")
+											no-repeat center !important;
+									}
+								}
+							}
+							&.active,
+							&.active:hover {
+								.link-area {
+									.open-status {
+										background: url("#{$assetPath}icons/minus-icon-m.svg")
+											no-repeat center !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.right-side-menu {
+				.right-side-ul {
+					> li {
+						&.languageselect {
+							&:hover {
+								.drop-select {
+									&::after {
+										background: url("#{$assetPath}arrow_down_maroon.png")
+											no-repeat center;
+									}
+								}
+							}
+						}
+						&.countryselect {
+							.drop-select {
+								&::after {
+									background: url("#{$assetPath}arrow_down_white.png") no-repeat
+										center;
+								}
+							}
+							&:hover {
+								.drop-select {
+									&::after {
+										background: url("#{$assetPath}arrow_down_white.png")
+											no-repeat center;
+									}
+								}
+							}
+						}
+						&.active {
+							> a {
+								color: $maroon;
+							}
+						}
+					}
+				}
+			}
+			.other-dropdown {
+				background: linear-gradient(
+					269.82deg,
+					#e2e2e2 19.81%,
+					rgba(255, 255, 255, 1) 50.15%
+				);
+				.dropdown-inner {
+					.left-block {
+						ul {
+							li {
+								a {
+									color: $grey3;
+									&.active,
+									&:hover {
+										background: $darkGrey4;
+										color: $white;
+									}
+								}
+							}
+						}
+					}
+					.right-block {
+						.desc {
+							border-left: 1px solid $grey3;
+							a {
+								color: $grey3;
+							}
+						}
+					}
+				}
+			}
+		}
+		.main-menu {
+			ul {
+				&.primary-menu {
+					> li {
+						.secondary-menu-wrapper-inner {
+							ul {
+								&.secondary-menu {
+									> li {
+										label {
+											&::after {
+												background: url("#{$assetPath}arrow_down_maroon.png")
+													no-repeat;
+											}
+										}
+									}
+								}
+							}
+						}
+						&:hover,
+						&.is-active {
+							.menu-item {
+								&::before {
+									background: linear-gradient(
+										270deg,
+										$orange 5.2%,
+										$orange 100.17%
+									);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.personal-banking {
+			.ic-btn {
+				border: 1px solid $white;
+			}
+			&:after {
+				background: url("#{$assetPath}arrow_down_black.png") no-repeat;
+			}
+			&:hover {
+				&:after {
+					background: url("#{$assetPath}arrow_down_maroon_down.png") no-repeat;
+				}
+			}
+		}
+		.user-login {
+			.ic-btn {
+				background-color: $white;
+				border-color: $white;
+				padding: 3px 25px;
+				color: $darkGrey4;
+				&:hover {
+					background-color: $maroon1;
+					border-color: $maroon1;
+				}
+			}
+		}
+		.new-user-login {
+			.ic-btn {
+				border: 1px solid $white;
+			}
+		}
+		.find-product-menu {
+			.title {
+				color: $maroon1;
+				&::before {
+					background: url("#{$assetPath}search-m-maroon.svg") no-repeat center;
+				}
+				&::after {
+					background: url("#{$assetPath}arrow_down_maroon.png") no-repeat;
+				}
+				&.is-active {
+					&::after {
+						background: url("#{$assetPath}arrow_down_maroon_down.png") no-repeat;
+					}
+				}
+			}
+		}
+	}
+	.search {
+		.menu-search-box {
+			form {
+				.mic {
+					background: url("#{$assetPath}icons/mic-m.svg") no-repeat center;
+				}
+				.search-btn {
+					background: url("#{$assetPath}icons/icon_search_maroon.svg") no-repeat
+						center;
+				}
+			}
+		}
+	}
+}
+
+.new-header.mobile {
+	.user-login {
+		.ic-btn {
+			.icon-user {
+				background: url("../images/icons/icon_user_black.png") no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	.search-wrapper {
+		.icon-search {
+			background: url("../images/icons/icon_search_black.png") no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.personal-banking-container {
+	.personal-list {
+		ul {
+			li {
+				a {
+					&::after {
+						background: url("#{$assetPath}arrow_down_maroon.png") no-repeat;
+					}
+				}
+			}
+		}
+	}
+}
+
+.new-header.mobile {
+	.languageselect-mob,
+	.countryselect-mob {
+		&:hover {
+			.drop-select {
+				&::after {
+					background: url("../images/arrow_down_maroon.png") no-repeat center;
+				}
+			}
+		}
+	}
+
+	.menu-tab-list {
+		.menu-tab {
+			&.active {
+				.open-status {
+					background: url("../images/arrow_down_maroon.png") no-repeat center;
+				}
+			}
+		}
+	}
+	.menu-fold {
+		.menu-back-link {
+			p {
+				&::before {
+					background-color: $maroon1;
+				}
+			}
+		}
+		.menu-list-item {
+			> ul {
+				> li {
+					&:after {
+						background: url("../images/arrow_down_maroon.png") no-repeat center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section {
+	.section-inner {
+		.section-label-new,
+		.section-label {
+			color: $maroon;
+		}
+	}
+}
+
+.nav-tabs {
+	li {
+		&.active {
+			a {
+				background-color: $orange !important;
+			}
+			&::before {
+				background: url("#{$assetPath}icons/active-left-b.png");
+			}
+			&::after {
+				background: url("#{$assetPath}icons/active-right-b.png");
+			}
+		}
+	}
+}
+
+.search-box {
+	.search-btns {
+		button {
+			&.search-btn {
+				background: url("../images/icons/icon_search_maroon.png") no-repeat;
+				background-size: contain;
+			}
+			&.close-btn {
+				background: url("../images/icons/maroon_close-icon.svg") no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+}
+.notification-alert {
+	border-right: 5px solid $maroon1;
+}
+
+.ways-to-bank-section::before {
+	background: linear-gradient(
+		0deg,
+		$textGreyLight2 20.75%,
+		rgba(246, 246, 246, 0) 80%
+	);
+}
+
+.notification {
+	.notifications-count {
+		background: $white;
+		color: $darkGrey4;
+		@include mq(tablet) {
+			background: $darkGrey4;
+			color: $white;
+		}
+	}
+}
+
+.notification-alert,
+.banner-section .tagline {
+	background: $maroon1;
+	border-right: 5px solid $orange;
+}
+
+.interest-rates {
+	background: url("#{$assetPath}tabs1/wealth-interestrate-bg.jpg") no-repeat;
+	background-size: cover;
+}
+
+.card-section {
+	.section-inner {
+		.card-item {
+			.list {
+				&.bill-list {
+					> li {
+						.n_icon {
+							background: $maroon1;
+						}
+					}
+				}
+			}
+		}
+	}
+}

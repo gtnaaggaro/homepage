@@ -1,0 +1,60 @@
+/* calculator-container */
+.page-calculators-section {
+  &.calculators-section {
+    margin: 20px 0 40px;
+    .left-panel {
+      .card-panel {
+        .card-panel-bottom {
+          ul {
+            li {
+              font-size: 15px;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+    }
+    .right-panel {
+      .tab-pane {
+        padding-top: 0;
+      }
+      .tab-pane {
+        h3 {
+          font-size: 26px;
+        }
+      }
+    }
+    .calculator-nps-container {
+      input[type="range"] {
+        height: 2px;
+      }
+    }
+    .result-container {
+      .font-18 {
+        font-size: 18px !important;
+      }
+    }
+    hr {
+      opacity: 0.2 !important;
+    }
+
+    @include mq(tablet) {
+      margin-top: 110px;
+      .calculator-nps-container {
+        .input-style {
+          max-width: 100%;
+        }
+      }
+    }
+    @media only screen and (max-width: 580px) {
+      .page-nps {
+        .cal-dropdown {
+          .ui-selectmenu-button {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

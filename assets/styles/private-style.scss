@@ -1,0 +1,196 @@
+@import "sass/components/mixins";
+@import "sass/components/private-variable";
+@import "sass/layout/custom";
+@import "sass/layout/header";
+@import "sass/components/breadcrumb-nav";
+@import "sass/components/slider";
+@import "sass/components/cards";
+@import "sass/components/tabs";
+@import "sass/components/select";
+@import "sass/components/calculator";
+@import "sass/layout/header-notification";
+@import "sass/components/notification";
+@import "sass/layout/footer";
+@import "sass/pages/home";
+@import "sass/pages/life-stages";
+
+/* overwrite */
+.announcement-section {
+	.section-inner {
+		.link {
+			ul {
+				li {
+					&:last-child {
+						a {
+							border-color: $maroon;
+						}
+					}
+					a {
+						color: $maroon;
+					}
+				}
+			}
+		}
+	}
+}
+
+.notification {
+	.notifications-count {
+		background: $orange;
+	}
+}
+
+.ic-more:after {
+	background: url("#{$assetPath}icons/more-g.png") no-repeat;
+}
+
+.new-header {
+	&.desktop {
+		.menu-level-1-child {
+			&.left-side-menu {
+				ul {
+					li {
+						&.other-menu {
+							&.active,
+							&.current {
+								.link-area {
+									&::before {
+										background: url("#{$assetPath}icons/active-left-g.png");
+									}
+									&::after {
+										background: url("#{$assetPath}icons/active-right-g.png");
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.other-dropdown {
+				background: linear-gradient(159.86deg, $orange 46%, $black 85.09%);
+			}
+		}
+		.main-menu {
+			ul {
+				&.primary-menu {
+					> li {
+						.secondary-menu-wrapper-inner {
+							ul {
+								&.secondary-menu {
+									> li {
+										label {
+											&::after {
+												background: url("#{$assetPath}arrow_down_orange.png")
+													no-repeat;
+											}
+										}
+										&.active {
+											label {
+												color: $maroon;
+											}
+										}
+									}
+								}
+							}
+						}
+						&:hover,
+						&.is-active {
+							.menu-item {
+								&::before {
+									background: linear-gradient(
+										270deg,
+										$orange 5.2%,
+										$orange 100.17%
+									);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.personal-banking {
+			&:hover {
+				&:after {
+					background: url("../images/arrow_down_orange.png") no-repeat;
+					background-size: contain;
+				}
+			}
+			&.is-active {
+				&:after {
+					background: url("../images/arrow_up_orange.png") no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+		.find-product-menu {
+			.title {
+				&::before {
+					background: url("#{$assetPath}search-m-gold.svg") no-repeat center;
+				}
+				&::after {
+					background: url("#{$assetPath}arrow_down_gold.png") no-repeat;
+				}
+				&.is-active {
+					&::after {
+						background: url("#{$assetPath}arrow_up_gold.png") no-repeat;
+					}
+				}
+			}
+		}
+	}
+	.search {
+		.menu-search-box {
+			form {
+				.mic {
+					background: url("#{$assetPath}icons/mic-gold.svg") no-repeat center;
+				}
+				.search-btn {
+					background: url("#{$assetPath}icons/icon_search_gold.svg") no-repeat
+						center;
+				}
+			}
+		}
+	}
+}
+
+.new-header.mobile {
+	.burger-menu {
+		span {
+			background: $orange;
+		}
+	}
+	.user-login {
+		.ic-btn {
+			.icon-user {
+				background: url("../images/icons/icon_user_gold.png") no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	.search-wrapper {
+		.icon-search {
+			background: url("../images/icons/icon_search_gold.png") no-repeat;
+			background-size: contain;
+		}
+	}
+}
+
+.nav-tabs li {
+	&.active {
+		a {
+			background-color: $orange !important;
+		}
+		&::before {
+			background: url("#{$assetPath}icons/active-left-g.png");
+		}
+		&::after {
+			background: url("#{$assetPath}icons/active-right-g.png");
+		}
+	}
+	&:hover {
+		a {
+			color: $maroon;
+		}
+	}
+}

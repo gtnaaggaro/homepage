@@ -1,0 +1,230 @@
+.ifsc-finder-section {
+    .orange-bg {
+        margin-top: 15px;
+        padding: 40px;
+    }
+
+    h5 {
+        margin-bottom: 20px;
+    }
+
+    p.f-16 {
+        line-height: 24px;
+        max-width: 1080px;
+    }
+
+    .search-container {
+        margin: 0 0 20px;
+        @include display-flex();
+        max-width: 714px;
+
+        .search-box-area {
+            position: static;
+            max-width: 594px;
+            margin-right: 20px;
+            width: calc(100% - 115px);
+
+            input[type="text"] { 
+                background: url("../images/icons/search-icon.svg") no-repeat right;
+                background-size: 20px;
+                width: calc(100% - 15px);
+                padding: 10px 25px 10px 15px;
+            }
+        }
+
+        .ic-btn {
+            width: 100px;
+            position: absolute;
+            right: 0;
+            z-index: 9;
+            cursor: pointer;
+        }
+
+        .search-listing {
+            max-width: 594px;
+            width: calc(100% - 115px);
+        }
+    }
+
+    .or-text {
+        position: relative;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 138%;
+        color: $darkGrey8;
+        margin-bottom: 20px;
+
+        &::after {
+            content: "";
+            width: 100px;
+            height: 1px;
+            border-top: 1px dashed rgba(139, 139, 139, 0.5);
+            position: absolute;
+            top: 12px;
+            left: 35px
+        }
+    }
+
+    .branch-dropdowns {
+        @include display-flex();
+        @include flex-wrap(wrap);
+
+        .dropdown {    
+            max-width: 232px;
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            .ui-selectmenu-button {
+                max-width: 232px;
+            }
+
+            &:nth-child(3) {
+                max-width: 385px;
+
+                .ui-selectmenu-button {
+                    max-width: 385px;
+                }
+            }
+
+            label {
+                width: 100%;
+                margin-bottom: 10px;
+                display: block;
+                font-size: 14px;
+                line-height: 19px;
+                color: $darkGrey4;
+            }          
+
+            .ui-selectmenu-button {
+                &.ui-button {
+                    background: $white;
+                    border: 1px solid $orange;
+                    font-size: 18px;
+                    font-weight: 400;
+                    width: 100%;
+
+                    .ui-selectmenu-icon {
+                        top: 20px;
+                        right: 15px;
+                        @include transform(scale(0.8));
+                    }
+
+                    .ui-selectmenu-text {
+                        padding: 10px 15px;
+                        font-size: 18px;
+                        font-weight: 400;
+                        min-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .branch-table {
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: separate;
+            border: 1px solid rgba(102, 102, 102, 0.2);
+            max-width: 1100px;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            tr {
+                td {
+                    padding: 10px 30px;
+                    background: $white;
+                    line-height: 24px;
+
+                    &:first-child {
+                        background: $grey16;
+                        width: 230px;
+                        border-right: 1px dashed rgba(102, 102, 102, 0.2);
+                        font-weight: 600;
+                    }
+                }
+
+                &:not(:last-child) {
+                    td {
+                        border-bottom: 1px solid rgba(102, 102, 102, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq(991px) {
+        .orange-bg {
+            padding: 40px 20px;
+        }        
+
+        .branch-dropdowns {
+            .dropdown, .dropdown:nth-child(3) {
+                max-width: 100%;
+                margin-bottom: 10px;
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+
+                .ui-selectmenu-button, &:nth-child(3) .ui-selectmenu-button {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .search-container {
+            margin-bottom: 25px;
+        }
+
+        .branch-table {
+            table {
+                tr {
+                    td:first-child {
+                        width: 160px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq(480px) {
+        .search-container {
+            .search-box-area, .search-listing {
+                width: calc(100% - 85px);
+            }
+
+            .ic-btn {
+                width: 75px;
+            }
+            
+        }
+
+        .branch-table {
+            table {
+                tr {
+                    td {
+                        padding: 10px 20px;
+
+                        &:first-child {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* dropdown height */
+#state-dropdown-menu, #city-dropdown-menu, #branch-dropdown-menu {
+    max-height: 300px;
+}
+#branch-dropdown-menu {
+    max-width: 385px;
+}

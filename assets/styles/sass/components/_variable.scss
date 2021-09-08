@@ -1,0 +1,144 @@
+/* font */
+@import "font-muli";
+
+/*Path*/
+$assetPath: "../images/";
+/*Colors*/
+$maroon: #ad1e23;
+$maroon1: #ff3a40;
+$maroon2: #b02a30;
+$maroon3: #b13034;
+$maroon4: #8E151A;
+$maroon5: #D3292F;
+$maroon6: #BB2328;
+$orange: #f37e20;
+$orange1: #d64815;
+$orange2: #DA4008;
+$orange3: #E95603;
+$orange4: #D5380B;
+$orange5: #DC5A10;
+$orange6: #fddec9;
+$orange7: #EC6423;
+$yellow: #f3a126;
+$yellow1: #ffa500;
+$blue: #074a86;
+$blue1: #074a86;
+$blue2: #0f5fa5;
+$blue3: #115694;
+$blue4: #104A8F;
+$white: #fff;
+$black: #000;
+$textGrey: #4b4b4b;
+$textGreyLight: #a6a6a6;
+$textGreyLight1: #afafaf;
+$textGreyLight2: #fff7eb;
+$textGreyLight3: #e5e5e5;
+$textGreyLight4: #FFFDF9;
+$textdarkGrey: #131317;
+$grey1: #d1cfbb;
+$grey2: #646464;
+$grey3: #333;
+$grey4: #f6f6f6;
+$grey5: #8b8b8b;
+$grey6: #f9f9f9;
+$grey7: #fdfdfd;
+$grey8: #bdbdbd;
+$grey9: #dedede;
+$grey10: #c4c4c4;
+$grey11: #e6e6e6;
+$grey12: #929292;
+$grey13: #626262;
+$grey14: #818181;
+$grey15: #e9e7e7;
+$grey16: #fdf6f4;
+$grey17: #f2f5f6;
+$grey18: #ebe7e7;
+$grey19: #f7f7f7;
+$grey20: #fbfbfb;
+$grey21: #fff0e3;
+$grey22: #ffebdc;
+$grey23: #f0f0f0;
+$grey24: #cfcfcf;
+$grey25: #fff0e5;
+$grey26: #f8f8f8;
+$grey27: #e0e0e0;
+$grey28: #adadad;
+$grey29: #f1f1f1;
+$grey30: #bbbbbb;
+$grey31: #e7e7e7;
+$grey32: #fff2eb;
+$grey33: #e7ddd5;
+$grey34: #dcdcdc;
+$grey35: #f4f4f4;
+$grey36: #7d7d7d;
+$grey37: #808080;
+$grey38: #FAF9F9;
+$grey39: #231D1F;
+$grey40: #C8C8C8;
+$grey41: #A7A7A7;
+$grey42: #CEC7C1;
+$grey43: #D5D5D5;
+$grey44: #EEEEEE;
+$grey45: #f2f2f2;
+$grey46: #C5CBD7;
+$grey47: #E4E4E4;
+$grey48: #5C5C5C;
+$grey49: #848484;
+$bgGrey: #fafaf6;
+$darkGrey: #3d3d3d;
+$darkGrey2: #737373;
+$darkGrey3: #333a43;
+$darkGrey4: #666666;
+$darkGrey5: #858585;
+$darkGrey6: #989898;
+$darkGrey7: #535353;
+$darkGrey8: #999999;
+$darkGrey9: #d3d3d3;
+$darkGrey10: #030303;
+$darkGrey11: #474545;
+$darkGrey12: #7d8082;
+$darkGrey13: #757677;
+$darkGrey14: #D2D2D2;
+$menuTitle: #364255;
+$menuListItem: #828282;
+$green: #3fc41d;
+$green1: #219653;
+$green2: #8bd541;
+$green3: #389838;
+$green4: #66bd66;
+$green5: #4caf50;
+$red: #a41906;
+$red1: #e6371f;
+$red2: #ff0000;
+$red3: #FF4A42;
+$lightorange: #fff0e6;
+$lightorange2: #FFF3ED;
+$lightorange3: #FFECE2;
+$gold-color: #b6985a;
+$brown1: #baa173;
+$light-sky: #eaf5ff;
+$light-sky1: #ebf6fe;
+
+/* background */
+.orange {
+	background-color: $orange;
+}
+.light-orange {
+	background-color: $lightorange;
+}
+.grey {
+	background-color: $grey2;
+}
+.white {
+	background-color: $white;
+}
+.black {
+	background-color: $black;
+}
+.textGreyLight3 {
+	color: $textGreyLight3;
+}
+
+/*Other*/
+$max-width: 1260px;
+$font-family: "Muli", sans-serif;

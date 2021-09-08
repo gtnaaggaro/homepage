@@ -1,0 +1,121 @@
+/* choose us Start */
+.choose-us-section {
+  background: $textGreyLight2;
+  .section-inner {
+    padding: 40px 20px;
+    .choose-us-slider {
+      @include display-flex; 
+      @include flex-justify-content(space-between);
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+  }
+  .card-item {
+    @include radius(4px);
+    @include transition(background 0.3s);
+    margin: 0 15px;
+    .title {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 120%;
+        padding: 10px 0 10px 0;
+        position: relative;
+        margin-bottom: 10px;
+        min-height: 60px;
+        max-width: 190px;
+        width: 100%;
+        .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    .description {
+        margin-bottom: 24px;
+        line-height: 21px;
+        min-height: 65px;
+        color: #737373;
+    }
+    .ic-btn {
+        border: 0;
+        &.white {
+            background: $white;
+        }
+    }
+  } 
+  
+  @include mq(tablet) {
+    .section-inner  {
+      .section-title {              
+        text-align: center;
+        padding: 0 5px;
+        margin: 0 auto 10px;
+        max-width: 250px;
+        line-height: 1.4;
+        strong {
+          display: block;
+        }
+      }
+      .choose-us-slider {
+        display: block;
+        margin: 0;
+      }
+    }
+    .choose-us-slider {
+      .card-item {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 25px 0;
+        @include display-flex;
+        @include flex-direction(column);
+        @include flex-align-items(center);
+        text-align:center ;
+        &:last-child {
+          border-bottom: 0;
+        }
+        .description {
+          min-height: auto;
+        }
+      }
+      .icon {
+        display: block;
+        width: 35px;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          display: block;
+        }
+      }
+      .title {
+        display: block;
+        min-height: auto;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 28px;
+        padding-bottom: 0;
+        max-width: 100%;
+      }
+      .description {
+        margin-bottom: 10px;
+      }
+    }  
+  }
+
+
+  @include mq(phone-wide) { 
+    .section-label .middle-text:before, .section-label .middle-text:after {
+      width: 60px!important;
+    }
+    .choose-us-slider {
+      .card-item {
+        .description {
+          margin: 0 auto 10px;
+        }        
+      }
+    }
+  }
+}

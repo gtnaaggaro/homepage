@@ -1,0 +1,254 @@
+@import "mixins";
+.nav-tabs {
+  @include display-flex;
+  @include flex-justify-content(center);
+  border-bottom: 0 !important;
+  position: relative;
+  margin: 0;
+  
+  li {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: -4px;
+    margin-bottom: 0;
+    a {
+      color: $darkGrey;
+      font-size: 13px;
+      background: $grey18;
+      border: none;
+      text-transform: uppercase;
+      padding: 11px 25px;
+      @include display-flex;
+      align-items: center;
+      vertical-align: middle;
+      border: none !important;
+      &:before {
+        display: inline-block;
+        width: 31px;
+        height: 19px;
+        margin-right: 6px;
+        background-size: contain !important;
+      }
+    }
+    span {
+      margin-right: 10px;
+      img {
+        height: 18px;
+      }
+      &.h-icon {
+        display: none;
+      }
+      &.title {
+        margin-right: 0;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 40px;
+      width: 24px;
+    }
+    &::after {
+      width: 40px;
+      right: -15px;
+      background: url("#{$assetPath}icons/tab-left-icon.png") no-repeat;
+      z-index: 1;
+      @include transform(scaleX(-1));
+    }
+    &:first-child {
+      &::before {
+        left: -22px;
+        background: url("#{$assetPath}icons/normal-left.png") no-repeat;
+      }
+    }
+    &:last-child {
+      &::after {
+        width: 25px;
+        right: -20px;
+        background: url("#{$assetPath}icons/normal-left.png") no-repeat;
+        transform: scaleX(-1);
+      }
+    }
+    &.active {
+      span {
+        &.n-icon {
+          display: none;
+        }
+        &.h-icon {
+          display: inline-block;
+        }
+      }
+      &::before {
+        left: -22px;
+        background: url("#{$assetPath}icons/active-left.png") no-repeat;
+        z-index: 2;
+      }
+      &::after {
+        width: 25px;
+        right: -20px;
+        background: url("#{$assetPath}icons/active-left.png") no-repeat;
+        z-index: 2;
+        @include transform(scaleX(-1));
+      }
+      &:hover {
+        a {
+          color: $white;
+        }
+      }
+      a {
+        background-color: $orange !important;
+        border: none !important;
+        color: $white !important;
+        font-weight: 600;
+        @include display-flex;
+        align-items: center;
+        vertical-align: middle;
+        z-index: 1;
+      }
+    }
+    &:hover {
+      a {
+        background: $grey18;
+        color: $orange;
+      }
+    }
+  }
+  &.inside-nav-tabs {
+    li {
+      a {
+        &::before {
+          width: 40px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  &.nav-card-tabs {
+    li {
+      span {
+        img {
+          height: 30px;
+        }
+        &.title {
+          width: 192px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav-tabs {
+    &.inside-nav-tabs {
+      li {
+        a {
+          padding: 11px 22px;
+          &::before {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tabs-section {
+    margin-left: 0;
+    overflow-x: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    overflow-y: hidden;
+    @include display-flex;
+    vertical-align: middle;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &.active {
+      margin-left: 25px;
+    }
+  }
+  .arrow-hidden {
+    visibility: hidden;
+  }
+  .left-arrow {
+    position: absolute;
+    left: -8px;
+    width: 57px;
+    top: 0;
+    //margin-top: -2px;
+    z-index: 9;
+    height: 40px;
+    cursor: pointer;
+    background: linear-gradient(
+      90deg,
+      #f6f6f6 -6.25%,
+      #f6f6f6 43.55%,
+      rgba(246, 246, 246, 0) 100%
+    );
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 57px;
+      height: 40px;
+      background: url("#{$assetPath}left_arrow.png") no-repeat center center;
+      background-size: 10px;
+    }
+  }
+  .right-arrow {
+    position: absolute;
+    right: -8px;
+    z-index: 2;
+    height: 40px;
+    width: 57px;
+    top: 0;
+    cursor: pointer;
+    background: linear-gradient(
+      270deg,
+      #f6f6f6 -6.25%,
+      #f6f6f6 43.55%,
+      rgba(246, 246, 246, 0) 100%
+    );
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 57px;
+      height: 40px;
+      background: url("#{$assetPath}left_arrow.png") no-repeat center center;
+      background-size: 10px;
+      padding: 20px 20px;
+      @include transform(scaleX(-1));
+    }
+  }
+  .nav-tabs {
+    margin: 0 auto;
+    display: block;
+    max-width: 98%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    li {
+      display: inline-block;
+      float: none;
+      vertical-align: bottom;
+      margin-right: -6px;
+    }
+    &:before,
+    &:after {
+      width: 20px !important;
+      display: inline-block;
+    }
+    &:before {
+      transform: matrix(1, 0, 0, -1, 4, -6);
+    }
+    &:after {
+      transform: matrix(-1, 0, 0, 1, 0, -6);
+    }
+  }
+}

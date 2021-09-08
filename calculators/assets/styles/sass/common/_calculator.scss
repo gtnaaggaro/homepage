@@ -1,0 +1,633 @@
+@import "mixins";
+
+/*disable-el  */
+.disable-el {
+  pointer-events: none !important;
+}
+
+/* select-filter */
+.select-filter {
+  @include display-flex;
+  @include flex-justify-content(center);
+  max-width: 60%;
+  width: 100%;
+  margin: 0 auto 10px;
+  @include flex-align-items(baseline);
+  label {
+    margin-right: 15px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  .ui-selectmenu-text {
+    font-size: 16px;
+    font-weight: 600;
+    height: 25px;
+    width: 100%;
+  }
+  .ui-selectmenu-button-closed,
+  .ui-selectmenu-button-open {
+    border-bottom: 0.5px solid rgba(75, 75, 75, 0.5);
+  }
+  #ui-id-1-button {
+    margin-right: 25px;
+  }
+  @media only screen and (max-width: 1199px) {
+    max-width: 80%;
+  }
+  @media only screen and (max-width: 992px) {
+    max-width: 100%;
+    margin-bottom: 20px;
+    .ui-button {
+      width: 100% !important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 0 20px;
+  }
+}
+
+/* .calculators-section */
+.calculators-section {
+  overflow: hidden;
+
+  .ic-btn {
+    margin-right: 36px;
+  }
+  .tab-content {
+    &.product-tab-content {
+      position: relative;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .section-inner {
+      padding: 0 !important;
+    }
+  }
+
+  .tabpanel-inner {
+    position: relative;
+    @include display-flex;
+    @include flex-wrap(wrap);
+  }
+  .product-tabs {
+    @include display-flex();
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 45%;
+      max-width: 450px;
+      height: 40px;
+      margin-right: 40px;
+    }
+    .nav-tabs {
+      li {
+        a {
+          height: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .left-panel {
+    width: 37%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    .card-panel {
+      height: 100%;
+      @include radius(10px);
+      overflow: hidden;
+      .card-panel-inner {
+        height: 100%;
+        background-color: $orange;
+        &.heightauto {
+          height: auto;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        height: auto;
+        .card-panel-inner {
+          height: auto;
+        }
+      }
+      &.heightauto {
+        height: auto;
+      }
+      .card-panel-top {
+        img {
+          width: 100%;
+        }
+      }
+      .card-panel-bottom {
+        background-color: $orange;
+        color: $white;
+        padding: 30px;
+        height: 100%;
+        h2,
+        h3 {
+          font-size: 30px;
+          line-height: 1;
+          color: $white;
+          margin-bottom: 20px;
+          font-weight: 400;
+        }
+        p {
+          margin-bottom: 20px;
+          line-height: 24px;
+          font-size: 15px;
+          letter-spacing: 0.02em;
+        }
+        ul {
+          padding-left: 15px;
+          li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .right-panel {
+    width: 63%;
+    .tab-content {
+      background-color: $white;
+      min-height: 400px;
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: calc(100% - 146px);
+        background-color: $white;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        @media only screen and (max-width: 1174px) {
+          margin-left: -166px;
+        }
+        @media only screen and (max-width: 1087px) {
+          margin-left: -150px;
+        }
+        @media only screen and (max-width: 992px) {
+          top: 0;
+          margin-left: 0;
+          left: 0;
+        }
+      }
+      &.no-tab {
+        .tab-pane {
+          padding-top: 25px;
+        }
+      }
+    }
+    .tab-pane {
+      padding-top: 55px;
+      padding-left: 35px;
+      h3 {
+        font-weight: 300;
+        margin-bottom: 10px;
+        line-height: 33px;
+      }
+
+      .other-detail-wrapper {
+        @include display-flex;
+        @include flex-wrap(wrap);
+        .amount-wrapper {
+          @include display-flex;
+          @include flex-wrap(wrap);
+        }
+      }
+      .buttons-group {
+        margin-bottom: 40px;
+        .ic-btn {
+          margin-right: 25px;
+        }
+      }
+      .select-oranament-no {
+        width: 105px;
+        .ui-selectmenu-text {
+          text-align: center;
+        }
+      }
+      .table-wrapper {
+        .list-item {
+          @include display-flex();
+          @include flex-align-items(center);
+          .cal-dropdown,
+          .weight-grams {
+            width: 190px;
+            position: relative;
+            border-bottom: 1px solid $orange;
+          }
+          &:first-child {
+            .cal-dropdown,
+            .weight-grams,
+            .row-calculation {
+              border-top: 1px solid $orange;
+            }
+          }
+          .cal-dropdown {
+            .ui-selectmenu-button {
+              border-width: 0px 0px 0px 1px !important;
+              padding-left: 10px;
+            }
+          }
+          .weight-grams {
+            input {
+              border-width: 0px 1px 0px 1px !important;
+              padding-left: 20px;
+            }
+          }
+          .error {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            line-height: 1.5;
+          }
+          .row-calculation {
+            border-bottom: 1px solid $orange;
+            p {
+              font-size: 18px;
+              min-width: 170px;
+              border-right: 1px solid $orange;
+              padding: 9px 30px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1199px) {
+    .left-panel {
+      .card-panel {
+        .card-panel-bottom {
+          padding: 23px 20px 30px;
+          min-height: auto;
+          height: auto;
+        }
+      }
+    }
+    .right-panel {
+      padding-left: 10px;
+      .tab-pane {
+        .other-detail-wrapper {
+          display: block;
+          .tenure-section,
+          .amount-wrapper {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+          .tenure {
+            width: 50%;
+            min-width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .product-tabs {
+      &::before {
+        width: 30%;
+      }
+    }
+    .left-panel {
+      width: 30%;
+    }
+    .right-panel {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .ic-btn {
+      margin-right: 0;
+    }
+    .tabpanel-inner {
+      display: block;
+      position: relative;
+    }
+    .product-tabs {
+      position: relative;
+      &::before {
+        display: none;
+      }
+      .nav-tabs {
+        @include flex-justify-content(flex-start);
+        width: 100%;
+      }
+    }
+    .right-panel,
+    .left-panel {
+      width: 100%;
+      max-width: 100%;
+      flex-basis: 100%;
+      overflow: hidden;
+      padding: 0 20px;
+    }
+    .left-panel {
+      margin: 20px 0;
+      h3 {
+        font-size: 26px;
+        line-height: 138%;
+      }
+    }
+    .right-panel {
+      &:before,
+      &:after {
+        width: 20px;
+      }
+      .tab-pane {
+        padding: 0px !important;
+        h3 {
+          font-size: 26px;
+          line-height: 138%;
+        }
+        .card-panel {
+          margin: 20px 0;
+          @include radius(10px);
+          overflow: hidden;
+
+          .card-panel-top {
+            img {
+              width: 100%;
+            }
+          }
+          .card-panel-bottom {
+            background-color: $orange;
+            color: $white;
+            padding: 23px 30px 30px;
+            h3 {
+              color: $white;
+              margin-bottom: 20px;
+              font-weight: 400;
+            }
+            p {
+              margin-bottom: 20px;
+              line-height: 24px;
+              font-size: 15px;
+              letter-spacing: 0.02em;
+            }
+            ul {
+              padding-left: 15px;
+              li {
+                list-style-type: disc;
+                margin-bottom: 10px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .tab-content {
+        min-height: auto;
+        padding: 0;
+      }
+    }
+    .select-filter {
+      padding: 0 20px 10px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .right-panel {
+      .tab-pane {
+        .buttons-group {
+          .ic-btn {
+            min-width: 150px;
+            text-align: center;
+            &#btn-recalculate-edu {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .table-wrapper {
+          .list-item {
+            .cal-dropdown,
+            .weight-grams {
+              width: 85px;
+              position: relative;
+            }
+            .error {
+              font-size: 10px;
+            }
+            .row-calculation {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .right-panel {
+      .tab-pane {
+        .table-wrapper {
+          .list-item {
+            .row-calculation {
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* preapproved */
+.preapproved {
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .loan-amt-display {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .input-box {
+    input {
+      width: 100%;
+    }
+    input[type="range"] {
+      background-color: transparent;
+    }
+  }
+  .range-figures {
+    ul {
+      margin: 0;
+      padding: 0;
+      @include display-flex;
+      @include flex-justify-content(space-between);
+      li {
+        color: #a6a6a6;
+      }
+    }
+  }
+}
+
+/* other-detail-wrapper */
+.other-detail-wrapper {
+  margin: 15px 0 30px;
+  @include flex-justify-content(space-between);
+  @include flex-align-items(center);
+  .tenure-section {
+    @include display-flex;
+    @include flex-justify-content(space-between);
+    width: 40%;
+    .tenure {
+      min-width: 145px;
+      padding: 20px 20px 0 0;
+      label {
+        margin-bottom: 7px;
+        display: block;
+        line-height: normal;
+      }
+      .select-tenure,
+      .select-interes-rate {
+        .tenure-display,
+        .interest-display {
+          font-size: 26px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .amount-wrapper {
+    width: 60%;
+    background: #fff3e9;
+    @include radius(10px);
+    .emi-amount {
+      padding: 10px 20px 15px;
+      width: 50%;
+      min-width: 210px;
+
+      label {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+        line-height: normal;
+      }
+      .finalEmiAmt,
+      .interestPayble,
+      sup {
+        font-size: 26px;
+        line-height: normal;
+      }
+      sup {
+        // top: -2px;
+        font-size: 20px;
+      }
+      .finalEmiAmt {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* carloan */
+.carloan {
+  .ic-more {
+    padding-left: 20px;
+    @include mq(tablet) {
+      padding-left: 20px;
+    }
+  }
+}
+
+input:focus {
+  background-color: white !important;
+}
+
+.iframe-callback {
+  border: none;
+  height: 75px;
+  @media screen and (max-width: 640px) {
+    height: 220px;
+    margin: 0px -20px 0;
+    padding: 0 20px;
+    background: $grey17;
+    width: calc(100% + 40px);
+    .loan-forms {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+/* card-container */
+.card-container {
+  .radiobtn-group {
+    margin-bottom: 30px;
+  }
+}
+/* bt-cal */
+.bt-cal-btn {
+  @include mq(tablet) {
+    margin-top: 0;
+  }
+}
+
+/* graph */
+.graph-list {
+  margin: 10px 0 0;
+  ul {
+    @include display-flex();
+    @include flex-justify-content(flex-end);
+    @include flex-align-items(center);
+    margin: 0;
+    li {
+      position: relative;
+      padding-left: 20px;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        top: 5px;
+        left: 0;
+      }
+      &.lblue-bullet {
+        &::before {
+          background: linear-gradient(180deg, #8aaac7 0%, #6b8aa5 100%);
+        }
+      }
+      &.lpink-bullet {
+        &::before {
+          background: linear-gradient(180deg, #e38d8b 0%, #b77674 100%);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 360px) {
+    ul {
+      @include flex-direction(column);
+      @include flex-align-items(flex-start);
+      li {
+        &:not(:last-child) {
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+}
+
+/* loan-r-amt-input */
+.loan-r-amt-input {
+  @include display-flex();
+}

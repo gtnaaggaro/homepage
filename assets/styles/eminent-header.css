@@ -1,0 +1,162 @@
+/* overwrite */
+.announcement-section .section-inner .link ul li:last-child a {
+  border-color: #baa173;
+}
+
+.announcement-section .section-inner .link ul li a {
+  color: #baa173;
+}
+
+.notification .notifications-count {
+  background: #baa173;
+}
+
+a:hover,
+a:link,
+a:visited {
+  color: #baa173;
+}
+
+.ic-more:after {
+  background: url("../images/icons/more-brown.png") no-repeat;
+}
+
+.ic-btn,
+a.ic-btn:link,
+a.ic-btn:visited {
+  background: #baa173;
+  color: #fff;
+  border: 1px solid #b6985a;
+}
+
+.ic-btn:hover,
+a.ic-btn:link:hover,
+a.ic-btn:visited:hover {
+  background: #b6985a;
+  border: 1px solid #b6985a;
+}
+
+.ic-btn.white,
+a.ic-btn:link.white,
+a.ic-btn:visited.white {
+  color: #baa173;
+  border: 1px solid #baa173;
+}
+
+.ic-btn.white:hover,
+a.ic-btn:link.white:hover,
+a.ic-btn:visited.white:hover {
+  background: #b6985a;
+  color: #fff;
+}
+
+.new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu.active .link-area a, .new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu.current .link-area a {
+  background-color: #baa173 !important;
+}
+
+.new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu.active .link-area::before, .new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu.current .link-area::before {
+  background: url("../images/icons/active-left-brown.png");
+}
+
+.new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu.active .link-area::after, .new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu.current .link-area::after {
+  background: url("../images/icons/active-right-brown.png");
+}
+
+.new-header.desktop .menu-level-1-child.left-side-menu ul li.other-menu:hover .link-area a {
+  color: #baa173;
+}
+
+.new-header.desktop .menu-level-1-child .other-dropdown {
+  background: linear-gradient(159.86deg, #baa173 46%, #b6985a 85.09%);
+}
+
+.new-header.desktop .menu-level-1-child .other-dropdown .dropdown-inner .left-block ul li a {
+  color: #fff;
+}
+
+.new-header.desktop .menu-level-1-child .other-dropdown .dropdown-inner .left-block ul li a.active {
+  color: #baa173;
+}
+
+.new-header.desktop .menu-level-1-child.right-side-menu .right-side-ul > li.active span.open-status {
+  background: url("../images//arrow_down_grey.png") no-repeat left center;
+}
+
+.new-header.desktop .menu-level-1-child.right-side-menu .right-side-ul > li.languageselect:hover .drop-select::after, .new-header.desktop .menu-level-1-child.right-side-menu .right-side-ul > li.countryselect:hover .drop-select::after {
+  background: url("../images//arrow_down_grey.png") no-repeat center;
+}
+
+.new-header.desktop .menu-level-1-child.right-side-menu .right-side-ul > li.lang-icon:hover a {
+  color: #baa173;
+}
+
+.new-header.desktop .user-login .ic-btn {
+  background-color: #baa173;
+  border-color: #baa173;
+}
+
+.new-header.desktop .user-login .ic-btn:hover {
+  background-color: #b6985a;
+  border-color: #b6985a;
+}
+
+.new-header.desktop .personal-banking::after {
+  background: url("../images/arrow_down_brown.png") no-repeat;
+}
+
+.new-header.desktop .personal-banking:hover::after {
+  background: url("../images/arrow_down_brown.png") no-repeat;
+}
+
+.new-header.desktop .sub-menu-wrapper .sub-menu-inner ul li a {
+  color: #baa173;
+}
+
+.new-header.desktop .sub-menu-wrapper .sub-menu-inner ul li:hover {
+  background: #baa173;
+}
+
+.new-header .search .menu-search-box form,
+.new-header .search .mob-menu-search-box form {
+  border: 2px solid #baa173;
+}
+
+.new-header .search .menu-search-box form .mic,
+.new-header .search .mob-menu-search-box form .mic {
+  background: url("../images/icons/mic-brown.svg") no-repeat center;
+}
+
+.new-header .search .menu-search-box form .search-btn,
+.new-header .search .mob-menu-search-box form .search-btn {
+  background: url("../images/icons/icon_search_brown.svg") no-repeat center;
+}
+
+.nav-tabs li.active a {
+  background-color: #baa173 !important;
+}
+
+.nav-tabs li.active::before {
+  background: url(../images/icons/active-left-m.png);
+}
+
+.nav-tabs li.active::after {
+  background: url(../images/icons/active-right-m.png);
+}
+
+.slick-dots li.slick-active {
+  background: #baa173 !important;
+  border: 2px solid #baa173 !important;
+}
+
+.footer .footer-inner .primary {
+  background: #baa173;
+}
+
+.breadcrumbs ul li::before {
+  background: #baa173;
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #baa173;
+}
+/*# sourceMappingURL=eminent-header.css.map */

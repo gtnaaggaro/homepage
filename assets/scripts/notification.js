@@ -1,0 +1,1 @@
+$(".skip-intro").click((function(){$(".announcement-section").hide(),event.preventDefault(),$(".banner-section, .sidebar").addClass("top-padding")}));

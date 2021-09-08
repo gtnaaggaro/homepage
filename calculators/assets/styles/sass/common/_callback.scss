@@ -1,0 +1,187 @@
+/*disable-el  */
+.disable-el {
+  pointer-events: none !important;
+}
+
+/* loan-forms */
+.loan-forms {
+  @include display-flex;
+  vertical-align: middle;
+  .text-left {
+    max-width: 200px;
+    margin-right: 15px;
+  }
+  .content {
+    max-width: 340px;
+    width: 100%;
+    padding: 0 15px 0 0;
+    .form-slider {
+      .slick-list {
+        padding-bottom: 10px;
+      }
+      .form-group {
+        position: relative;
+        padding-bottom: 5px;
+        .form-group-inner {
+          @include display-flex;
+          padding: 5px 10px 8px 0;
+          border-bottom: 0.5px solid $textGrey;
+          vertical-align: middle;
+          align-items: center;
+          @include flex-justify-content(flex-end);
+          @include flex-align-items(flex-end);
+          margin-bottom: 2px;
+          &.error {
+            border-bottom: 0.5px solid $maroon;
+          }
+          .icon {
+            margin-right: 11px;
+            width: auto;
+            float: left;
+          }
+          .input-box {
+            float: right;
+            width: 90%;
+            input {
+              border: 0;
+              color: $textGreyLight;
+              max-width: 300px;
+              width: 100%;
+              &.error {
+                color: $red1;
+              }
+              &::placeholder {
+                color: $textGreyLight;
+              }
+              &::-ms-clear {
+                display: none;
+              }
+              &:-internal-autofill-selected,
+              &:-webkit-autofill,
+              &:-webkit-autofill:hover,
+              &:-webkit-autofill:focus &:-webkit-autofill {
+                @include shadow(0 0 0 50px white inset);
+              }
+            }
+          }
+        }
+        .error-msg {
+          position: absolute;
+          bottom: -13px;
+          color: $textGreyLight;
+          font-size: 12px;
+          line-height: 14px;
+        }
+        .success-message {
+          background: $grey11;
+          @include display-flex();
+          @include flex-align-items(center);
+          padding: 6px 13px 5px;
+          border-bottom: 0.5px solid $green1;
+          img {
+            flex: 0 1 auto;
+          }
+          p {
+            margin-left: 15px;
+            max-width: 180px;
+            font-weight: bold;
+          }
+        }
+      }
+      .slick-dots {
+        position: relative;
+        bottom: 0;
+        margin-top: 0;
+        padding: 0;
+      }
+      .cust-btn-submit {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        text-indent: 0;
+        width: 75px !important;
+        border-radius: 20px;
+        color: $white;
+        background: $textGrey !important;
+        pointer-events: none;
+        @include shadow(none);
+        appearance: none;
+        border: none;
+        &.active-btn-submit {
+          background: $orange !important;
+          pointer-events: initial;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    width: 22px !important;
+    height: 22px !important;
+    &.slick-prev {
+      background: $orange url("#{$assetPath}left_arrow_orange.png") center
+        center no-repeat !important;
+      left: -53px;
+      top: 5px;
+      border: 0;
+      display: none !important;
+      &:hover {
+        border: 0;
+      }
+    }
+    &.slick-next {
+      background: $orange url("#{$assetPath}left_arrow_orange.png") center
+        center no-repeat !important;
+      right: -8px;
+      top: 5px;
+      border: 0;
+      &:hover {
+        border: 0;
+      }
+    }
+    &.arrow-disable {
+      background: $textGrey url("#{$assetPath}right_arrow_white.png") center
+        center no-repeat !important;
+      pointer-events: none;
+    }
+  }
+  .slick-dots {
+    padding-left: 5px;
+    text-align: left;
+    bottom: -27px;
+  }
+  input:focus {
+    background-color: white !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .loan-forms {
+    display: block;
+    margin: 0;
+    padding: 40px 20px;
+    background: $grey17;
+    .content {
+      padding: 0;
+      max-width: 320px;
+      width: 100%;
+    }
+    .text-left {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .form-slider {
+      .form-group {
+        .input-box {
+          float: right;
+          width: 93%;
+          input {
+            background: transparent;
+          }
+        }
+      }
+    }
+    .slick-arrow.slick-prev {
+      left: -42px;
+    }
+  }
+}

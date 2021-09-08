@@ -1,0 +1,86 @@
+.quick-action {
+    position: fixed;
+    width: 152px;
+    height: 32px;
+    bottom: 65px;
+    right: 20px;
+    z-index: 12;    
+    border-radius: 50px;
+    font-size: 13.4px;
+    letter-spacing: 0.02em;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F37E20), to(#EE4611));
+    background: linear-gradient( 180deg, #F37E20 0%, #EE4611 100%);
+    color: $white;  
+
+    a {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .quick-popup{   
+        width: 152px;
+        height: 32px;
+        @include display-flex();
+        @include flex-align-items(center);
+        @include flex-justify-content(center);
+        color: $white;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    .quick-popup-content {
+        padding: 15px 10px 15px 15px;
+
+        .close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            li {
+                cursor: pointer;
+
+                .icon {
+                    min-width: 40px;
+                    margin-right: 10px;
+
+                    img {
+                        vertical-align: bottom;
+                    }
+                }
+
+                &:not(:last-child) {
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+                }
+            }
+        }
+    }
+
+    &.active {
+        width: 225px;
+        height: 135px;
+        border-radius: 10px 0 0 10px;
+        right: 0;
+    }
+}
+
+#product-type-button {
+    display: none;
+}
+
+.callback-poup {
+   .imodal-content {
+     max-width: 697px;
+     max-height: 485px;
+   }
+}

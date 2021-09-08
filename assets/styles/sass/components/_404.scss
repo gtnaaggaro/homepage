@@ -1,0 +1,37 @@
+.error-content {
+    text-align: center;
+    padding: 30px 20px 50px;
+    
+    img {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 34px;
+        margin-bottom: 15px;
+        font-weight: 800;
+        color: $black;
+        text-transform: capitalize;
+    }
+
+    p {
+        color: $darkGrey4;
+    }
+
+    .ic-btn {
+        margin-top: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        min-width: 220px;
+    }
+
+    @include mq(tablet) {
+        img {
+            max-width: 200px; 
+        }   
+        
+        h3 {
+            font-size: 30px;
+        }
+    }
+}

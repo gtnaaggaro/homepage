@@ -1,0 +1,35 @@
+<svg width="48" height="42" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.25 10H24H44C45.6569 10 47 11.3431 47 13V36C47 37.6569 45.6569 39 44 39H24H17.25M5.75 10H4C2.34315 10 1 11.3431 1 13V36C1 37.6569 2.34315 39 4 39H5.75" stroke="#E77817" stroke-width="1.5"/>
+<rect x="5.75" y="7.75" width="11.5" height="33.5" rx="2.25" stroke="#E77817" stroke-width="1.5"/>
+<mask id="path-3-inside-1" fill="white">
+<rect x="23" y="24" width="4" height="4" rx="1"/>
+</mask>
+<rect x="23" y="24" width="4" height="4" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-3-inside-1)"/>
+<mask id="path-4-inside-2" fill="white">
+<rect x="23" y="16" width="16" height="6" rx="1"/>
+</mask>
+<rect x="23" y="16" width="16" height="6" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-4-inside-2)"/>
+<path d="M40 10V2C40 1.44772 39.5523 1 39 1H24C23.4477 1 23 1.44772 23 2V10" stroke="#E77817" stroke-width="1.5"/>
+<mask id="path-6-inside-3" fill="white">
+<rect x="29" y="24" width="4" height="4" rx="1"/>
+</mask>
+<rect x="29" y="24" width="4" height="4" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-6-inside-3)"/>
+<mask id="path-7-inside-4" fill="white">
+<rect x="35" y="24" width="4" height="4" rx="1"/>
+</mask>
+<rect x="35" y="24" width="4" height="4" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-7-inside-4)"/>
+<mask id="path-8-inside-5" fill="white">
+<rect x="23" y="30" width="4" height="4" rx="1"/>
+</mask>
+<rect x="23" y="30" width="4" height="4" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-8-inside-5)"/>
+<mask id="path-9-inside-6" fill="white">
+<rect x="29" y="30" width="4" height="4" rx="1"/>
+</mask>
+<rect x="29" y="30" width="4" height="4" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-9-inside-6)"/>
+<mask id="path-10-inside-7" fill="white">
+<rect x="35" y="30" width="4" height="4" rx="1"/>
+</mask>
+<rect x="35" y="30" width="4" height="4" rx="1" stroke="#E77817" stroke-width="3" mask="url(#path-10-inside-7)"/>
+<line x1="27.75" y1="4.25" x2="35.25" y2="4.25" stroke="#E77817" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="27.75" y1="7.25" x2="35.25" y2="7.25" stroke="#E77817" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

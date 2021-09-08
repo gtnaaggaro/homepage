@@ -1,0 +1,175 @@
+@import "../components/mixins";
+
+.logout {
+  .banner-section {
+    .section-inner {
+      padding: 70px 20px;
+    }
+
+    h4 {
+      letter-spacing: -0.02em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 336px;
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    .buttons {
+      margin-top: 15px;
+
+      a {
+        margin-right: 10px;
+      }
+    }
+
+    .notification-alert {
+      padding: 20px 30px;
+      max-width: 436px;
+      @include display-flex;
+      @include flex-justify-content(space-between);
+      @include flex-align-items(center);
+
+      lable {
+        color: $white;
+        font-style: italic;
+        font-size: 14px;
+        line-height: 17px;
+        max-width: 150px;
+      }
+
+      .star-rating {
+        @include display-flex;
+        @include flex-justify-content(space-between);
+        @include flex-align-items(center);
+
+        .icon-star {
+          margin: 0 8px;
+          width: 34px;
+          height: 34px;
+          background-color: #F2F5F6;
+          background-image: url('#{$assetPath}icons/icon_star_maroon.png');
+          background-repeat: no-repeat;
+          background-size: 16px 16px;
+          background-position: center;
+          @include radius(100%);
+          transition: all 0.2s;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          &.selected,
+          &:hover,
+          &:hover ~ .icon-star {
+            background-image: url('#{$assetPath}icons/icon_star_orange.png');
+          }
+
+          &.star-1 {
+            -webkit-order: 1;
+            order: 1;
+          }
+
+          &.star-2 {
+            -webkit-order: 2;
+            order: 2;
+          }
+
+          &.star-3 {
+            -webkit-order: 3;
+            order: 3;
+          }
+
+          &.star-4 {
+            -webkit-order: 4;
+            order: 4;
+          }
+
+          &.star-5 {
+            -webkit-order: 5;
+            order: 5;
+          }
+        }
+      }
+    }
+  }
+
+  .find-right-product-section {
+    overflow: inherit;
+
+    .section-inner {
+      padding-bottom: 0;
+      position: relative;
+
+      &:after {
+        @include pseudo;
+        width: 64px;
+        height: 64px;
+        left: -90px;
+        top: -57px;
+        background: url('#{$assetPath}icons/icon_ipal.png') no-repeat;
+        background-size: contain;
+      }
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .block-wrapper {
+      @include display-flex;
+      @include flex-justify-content(space-between);
+      @include flex-align-items(center);
+    }
+
+    .vehicle-category {
+      color: $white;
+      text-transform: uppercase;
+      @include display-flex;
+      @include flex-align-items(center);
+
+      div {
+        margin-right: 30px;
+
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 4px;
+          height: 21px;
+          margin-bottom: 5px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        .icon-car {
+          width: 22px;
+          background-image: url('#{$assetPath}icons/icon-car.png');
+        }
+
+        .icon-byke {
+          width: 33px;
+          background-image: url('#{$assetPath}icons/icon_byke.png');
+        }
+
+        .icon-truck {
+          width: 32px;
+          background-image: url('#{$assetPath}icons/icon_truck.png');
+        }
+      }
+    }
+
+    h3 {
+      color: $white;
+      margin: 40px 0 15px;
+      max-width: 500px;
+      line-height: 102%;
+
+      span {
+        color: $orange;
+      }
+    }
+  }
+}

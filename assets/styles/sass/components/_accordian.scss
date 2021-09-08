@@ -1,0 +1,181 @@
+/* accordion */
+.accordion {
+	.accordion-list {
+		background: $white;
+		margin-bottom: 5px;
+		@include radius(6px);
+
+		.accordion-head {
+			position: relative;
+			font-size: 18px;
+			line-height: 23px;
+			color: $textGrey;
+			padding: 14px 50px 14px 30px;
+			cursor: pointer;
+			&::after {
+				content: "";
+				position: absolute;
+				width: 22px;
+				height: 22px;
+				top: 15px;
+				right: 25px;
+				background: url("#{$assetPath}icons/ac-plus.svg") no-repeat center;
+			}
+			&.active {
+				color: $orange;
+				&::after {
+					content: "";
+					background: url("#{$assetPath}icons/ac-minus.svg") no-repeat center;
+				}
+			}
+			@include mq(tablet) {
+				font-size: 14px;
+				line-height: 1.3;
+				padding: 20px 60px 20px 20px;
+			}
+		}
+		.accordion-content {
+			padding: 5px 30px 30px;
+			display: none;
+			ul {
+				li {
+					position: relative;
+					font-size: 14px;
+					line-height: 24px;
+					padding-left: 20px;
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+					&::before {
+						content: "";
+						width: 7px;
+						height: 7px;
+						background: $textGreyLight;
+						@include radius(50%);
+						position: absolute;
+						top: 8px;
+						left: 0;
+					}
+
+					ol {
+						margin-top: 15px;
+
+						li {
+							padding-left: 0;
+
+							&::before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			ol {
+				padding-left: 20px;
+				li {
+					list-style: inherit;
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+				}
+			}
+
+			p {
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+
+			@include mq(tablet) {
+				padding: 5px 20px 20px;
+			}
+		}
+	}
+}
+
+/* faq accordion */
+.card-accordion-wrapper {
+	.card-accordion-title,
+	.section-title {
+		margin-bottom: 30px;
+	}
+	.card-accordion-desc {
+		font-size: 18px;
+		font-weight: 400;
+		color: #3d3d3d;
+		margin-bottom: 30px;
+		line-height: 24px;
+		@include mq(tablet) {
+			font-size: 14px;
+		}
+	}
+}
+
+.card-accordion {
+	background-color: $white;
+	border: 1px solid #dedede;
+	border-radius: 6px;
+	padding: 20px;
+	@include shadow(0px 4px 15px rgba(117, 117, 117, 0.06));
+
+	h4 {
+		font-weight: 600;
+		font-size: 18px;
+		margin-bottom: 10px;
+		display: block;
+		color: #4b4b4b;
+	}
+	.accordion {
+		.accordion-list {
+			background: transparent;
+			margin-bottom: 5px;
+			border-radius: 0;
+			border-bottom: 1px solid #ececec;
+
+			&:last-child {
+				border-bottom: 0px !important;
+			}
+			
+			.accordion-head {
+				padding: 10px 25px 10px 0;
+				font-weight: 400;
+				&:after {
+					top: 10px;
+					right: 0;
+				}
+			}
+			.accordion-content {
+				padding-left: 0;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		margin-bottom: 20px;
+		&.t-card-accordion {
+			.accordion {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.accordion--scroll {
+	height: 210px;
+	overflow: auto;
+}
+
+.expand-all,
+.close-all {
+	font-size: 13px;
+}
+
+.card-accordion--action {
+	.card-accordion {
+		.accordion {
+			height: auto;
+			overflow: auto;
+		}
+	}
+}

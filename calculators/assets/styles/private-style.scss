@@ -1,0 +1,53 @@
+@import "sass/common/mixins";
+@import "sass/common/variable";
+@import "sass/common/private-variable";
+@import "sass/common/custom";
+@import "sass/common/slider";
+@import "sass/common/select-2";
+@import "sass/common/tabs";
+@import "sass/common/select";
+@import "sass/common/radio";
+@import "sass/common/date_picker";
+@import "sass/common/calculator";
+@import "sass/common/only-calculator";
+@import "sass/common/callback";
+
+/* overwrite */
+.ic-more:after {
+	background: url(../images/icons/more-g.png) no-repeat;
+}
+.nav-tabs li {
+	&.active {
+		a {
+			background-color: $orange !important;
+		}
+		&::before {
+			background: url(../images/icons/active-left-g.png);
+		}
+		&::after {
+			background: url(../images/icons/active-right-g.png);
+		}
+	}
+	&:hover {
+		a {
+			color: $maroon;
+		}
+	}
+}
+
+/* range slider */
+input[type="range"]::-webkit-slider-thumb {
+	background: $orange;
+	border: 1px solid $orange;
+}
+input[type="range"]::-moz-range-thumb {
+	background: $orange;
+	border: 1px solid $orange;
+}
+input[type="range"]::-ms-thumb {
+	background: $orange;
+	border: 1px solid $orange;
+}
+input[type="range"]::-ms-fill-lower {
+	background: $orange;
+}

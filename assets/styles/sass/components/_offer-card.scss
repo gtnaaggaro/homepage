@@ -1,0 +1,237 @@
+/* offer-card */
+.offer-card {
+  position: relative;
+  background: $white;
+  @include radius(10px);
+  @include shadow(0px 4px 15px rgba(117, 117, 117, 0.06));
+  border: 1px solid $grey9;
+  padding: 30px 30px 20px;
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  .card-inner {
+    .media {
+      position: relative;
+      @include radius(10px 10px 0 0);
+      height: 50px;
+      @include display-flex();
+      @include flex-align-items(flex-end);
+      margin-bottom: 20px;
+      img {
+        flex-grow: initial;
+        max-height: 50px;
+        vertical-align: bottom;
+        transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+          filter 1s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s;
+      }
+    }
+    .time {
+      @include display-flex();
+      @include flex-align-items(center);
+      position: absolute;
+      color: $maroon;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      width: auto;
+      height: 25px;
+      span {
+        margin-right: 10px;
+        &.remaining-time {
+          margin-right: 0;
+        }
+      }
+    }
+    .content {
+      padding: 0;
+      .title {
+        display: block;
+        text-decoration: none;
+        font-size: 22px;
+        line-height: 1.38;
+        color: $textGrey;
+        margin-bottom: 20px;
+        outline: none;
+        height: 60px;
+        overflow: hidden;
+      }
+      .description {
+        margin-bottom: 40px;
+        color: $grey5;
+        height: 60px;
+        overflow: hidden;
+        a {
+          color: $textGrey;
+        }
+      }
+
+      .button-group {
+        margin-bottom: 20px;
+        @include display-flex();
+        @include flex-align-items(center);
+        a {
+          &.ic-btn {
+            padding: 12px 18px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100%;
+            text-align: center;
+          }
+          &.ic-more {
+            min-width: 105px;
+          }
+          &:first-child {
+            margin-left: 0 !important;
+          }
+          &:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .card-bottom {
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        @include display-flex();
+        @include flex-align-items(center);
+
+        .date-readtime {
+          font-size: 12px;
+          color: $darkGrey4;
+          span {
+            &.num-viewer {
+              font-size: 14px;
+              display: inline-block;
+              background: url("#{$assetPath}icons/eye-icon-b.svg") no-repeat
+                right;
+              background-size: 20px;
+              padding-left: 0;
+              padding-right: 30px;
+              margin-right: 15px;
+            }
+            &.like {
+              display: inline-block;
+              background: url("#{$assetPath}icons/video/bookmark-light.svg")
+                no-repeat left;
+              background-size: 16px;
+              padding-left: 20px;
+            }
+            &.download {
+              display: inline-block;
+              background: url("#{$assetPath}icons/video/download-icon.svg")
+                no-repeat left;
+              background-size: 13px;
+              padding-left: 20px;
+            }
+            &:not(:last-child) {
+              padding-right: 10px;
+              margin-right: 5px;
+              border-right: 1px solid rgba(102, 102, 102, 0.2);
+            }
+          }
+        }
+        .share-content {
+          right: 0;
+        }
+        @include mq(tablet-small) {
+          @include flex-direction(row);
+          .bookmark-share {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .media {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  &.h-view {
+    .card-inner {
+      @include display-flex();
+      @include flex-align-items(center);
+    }
+  }
+
+  @include mq(1200px, max) {
+    padding: 20px;
+  }
+  @include mq(tablet) {
+    .card-inner {
+      .time {
+        top: 30px;
+      }
+      .content {
+        .card-title {
+          height: auto;
+        }
+        .title {
+          font-size: 18px;
+          margin-bottom: 15px;
+          height: 50px;
+        }
+        .description {
+          margin-bottom: 20px;
+        }
+        .button-group {
+          text-align: center;
+          a {
+            &.ic-btn {
+              display: block;
+              margin: 0 auto;
+              padding: 9px 18px;
+              text-align: center;
+              height: 40px;
+            }
+          }
+        }
+        .card-bottom {
+          .date-readtime {
+            span.num-viewer {
+              background-position: left;
+              padding-right: 0;
+              padding-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mq(phablet) {
+    .card-inner {
+      .content {
+        .title,
+        .description {
+          height: auto;
+        }
+      }
+    }
+  }
+  //22/02/2021 Update small device css
+  @include mq(340px) {
+      .card-inner{
+        .content{
+          .card-bottom{
+            @include flex-direction(column);
+            .date-readtime{
+              width: 100%;
+            }
+            .bookmark-share{
+              width: 100%;
+              margin-top: 20px;
+            }
+          }
+        } 
+      } 
+  }
+  //22/02/2021 End small device css
+}

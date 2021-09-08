@@ -1,0 +1,350 @@
+.product-category-page {
+  .page-topbar {
+    .links {
+      margin-left: auto;
+      .ic-more {
+        &:last-child {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.product-category-list {
+  background: linear-gradient(0, $grey4 0%, rgba(246, 246, 246, 0) 100%);
+  .product-list-cards {
+    @include display-flex();
+    margin: 0 -10px;
+    .product-list-card {
+      width: 25%;
+      background: $white;
+      @include shadow(0px 4px 15px rgba(117, 117, 117, 0.06));
+      border: 1px solid rgba(117, 117, 117, 0.06);
+      @include radius(10px);
+      margin: 0 10px;
+      padding: 12px 20px 20px 15px;
+      h5 {
+        font-size: 14px;
+        margin-bottom: 15px;
+        &.title {
+          position: relative;
+          padding-right: 30px;
+          margin-bottom: 15px;
+          span {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+        }
+      }
+      .list {
+        display: block;
+        > li {
+          padding-bottom: 8px;
+          .cta-title {
+            position: relative;
+            font-size: 15px;
+            width: 100%;
+            background: $lightorange;
+            color: $orange;
+            width: 100%;
+            padding: 10px 30px;
+            border: none;
+            font-size: 15px;
+            text-transform: capitalize;
+            font-weight: 500;
+            letter-spacing: 0;
+            @include radius(50px);
+          }
+          a {
+            text-decoration: none;
+          }
+          &:hover {
+            .cta-title {
+              background: $orange;
+              color: $white;
+            }
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      .ic-more {
+        font-size: 13px;
+        margin-top: 12px;
+        font-weight: bold;
+        &::after {
+          background-size: 6px;
+          top: 5px;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .cta-dropdown {
+        position: relative;
+        cursor: pointer;
+        .cta-link {
+          display: none;
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          top: 45px;
+          left: 0;
+          background: $white;
+          border: 1px solid $orange;
+          padding: 6px 12px;
+          @include radius(20px);
+          .close {
+            display: none;
+          }
+          h5 {
+            display: none;
+          }
+          a {
+            text-transform: capitalize;
+            display: inline-block;
+            font-size: 15px;
+            &.ic-btn {
+              padding: 2px 12px 3px;
+              margin-right: 10px;
+              color: $white;
+              &:hover {
+                background: $orange;
+                color: $white;
+              }
+            }
+            &.ic-more {
+              color: $orange;
+              letter-spacing: 0;
+              margin: 0;
+              padding-right: 10px;
+              &::after {
+                top: 6px;
+                width: 5px;
+                background-size: 5px;
+              }
+            }
+          }
+        }
+        &:hover {
+          .cta-link {
+            display: block;
+          }
+        }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          .cta-link {
+            padding: 8px;
+            a {
+              font-size: 13px;
+              &.ic-btn {
+                padding: 2px 6px 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.slick-slider {
+      display: block;
+      .slick-list {
+        padding-left: 0 !important;
+      }
+      .slick-dots {
+        position: static;
+        margin-top: 25px;
+        text-align: center;
+      }
+    }
+  }
+
+  @include mq(tablet) {
+    > .section-inner {
+      padding: 0 20px 15px;
+    }
+    .links {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 25px;
+      .button-group {
+        max-width: 200px;
+      }
+      .ic-more {
+        margin-top: 20px;
+      }
+    }
+    .product-list-cards {
+      &.active {
+        .slick-list,
+        .slick-track {
+          width: 100% !important;
+          overflow: initial !important;
+          transform: initial !important;
+        }
+      }
+      .product-list-card {
+        .cta-dropdown {
+          .cta-link {
+            &.active {
+              display: block !important;
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.8);
+              z-index: 99;
+            }
+          }
+          .cta-link-inner {
+            position: relative;
+            background: $white;
+            @include shadow(0px 4px 15px rgba(117, 117, 117, 0.06));
+            border-radius: 10px;
+            padding: 20px 15px 25px;
+            margin-top: 100px;
+            text-align: center;
+            h5 {
+              text-align: left;
+              display: block;
+            }
+            .close {
+              display: inline-block;
+              position: absolute;
+              right: 12px;
+              top: 12px;
+              img {
+                width: 10px;
+              }
+            }
+            a.ic-btn {
+              display: block;
+              text-align: center;
+              padding: 10px 20px;
+              margin-bottom: 20px;
+            }
+          }
+          &:hover {
+            .cta-link {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mq(tablet-small) {
+    .product-list-cards {
+      &.slick-slider {
+        margin: 0 -20px 0 -8px;
+      }
+    }
+  }
+}
+
+/* product-tab-section */
+.product-tab-section {
+  background: $grey4;
+  .section-inner {
+    padding: 10px 20px 0;
+  }
+  .product-category-tab {
+    background: $textGreyLight2;
+    .section-inner {
+      padding: 40px 20px 30px;
+    }
+    .product-cat-cards {
+      @include display-flex();
+      @include flex-wrap(wrap);
+      margin: 0 -12px;
+      .product-cat-card {
+        width: calc(33% - 20px);
+        margin: 0 12px 24px;
+        .media {
+          img {
+            width: 100%;
+          }
+        }
+        .content {
+          background: $white;
+          border: 1px solid $grey9;
+          @include radius(0 0 10px 10px);
+          padding: 25px;
+          h4 {
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 20px;
+          }
+          ul {
+            li {
+              &:not(:last-child) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                margin-bottom: 15px;
+              }
+              a {
+                display: block;
+                position: relative;
+                color: $orange;
+                font-size: 15px;
+                font-weight: 600;
+                text-decoration: none;
+                padding: 0 0 15px 0;
+                .icon {
+                  display: inline-block;
+                  width: 7px;
+                  height: 9px;
+                  margin-left: 5px;
+                  background: url("#{$assetPath}icons/more.png") no-repeat
+                    center;
+                }
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          .link {
+            margin-top: 5px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            a {
+              font-size: 15px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include mq(tablet) {
+    .section-title {
+      max-width: 280px;
+      font-size: 26px;
+      margin: 0 auto 24px;
+    }
+    .product-category-tab {
+      .product-cat-cards {
+        .product-cat-card {
+          width: calc(50% - 24px);
+          .content {
+            h4 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include mq(tablet-small) {
+    .product-category-tab {
+      .section-inner {
+        padding: 30px 20px 20px;
+      }
+      .product-cat-cards {
+        .product-cat-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

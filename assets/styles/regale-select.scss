@@ -1,0 +1,108 @@
+@import "sass/components/variable";
+
+/* overwrite */
+a:hover,
+a:link,
+a:visited {
+	color: $brown1;
+}
+
+.ic-btn,
+a.ic-btn:link,
+a.ic-btn:visited {
+	background: $brown1;
+	color: $white;
+	border: 1px solid $gold-color;
+	&:hover {
+		background: $gold-color;
+		border: 1px solid $gold-color;
+	}
+	&.white {
+		color: $brown1;
+		border: 1px solid $brown1;
+		&:hover {
+			background: $gold-color;
+			color: $white;
+		}
+	}
+}
+
+.left-arrow {
+	&:before {
+		background: url("#{$assetPath}icons/left_arrow_brown.png") no-repeat center
+			center;
+		background-size: 10px;
+	}
+}
+.right-arrow {
+	&:before {
+		background: url("#{$assetPath}icons/right_arrow_brown.png") no-repeat center
+			center;
+		background-size: 10px;
+	}
+}
+
+.nav-tabs li {
+	&.active {
+		a {
+			background-color: $brown1 !important;
+		}
+		&::before {
+			background: url("#{$assetPath}icons/active-left-brown.png");
+		}
+		&::after {
+			background: url("#{$assetPath}icons/active-right-brown.png");
+		}
+	}
+}
+
+.slick-dots {
+	li {
+		&.slick-active {
+			background: $brown1 !important;
+			border: 2px solid $brown1 !important;
+		}
+	}
+}
+
+.slick-arrow {
+	&.slick-prev {
+		background: url("#{$assetPath}icons/left_arrow_brown.png") no-repeat 14px
+			7px;
+	}
+	&.slick-next {
+		background: url("#{$assetPath}icons/left_arrow_brown.png") no-repeat 14px
+			7px;
+	}
+}
+
+.footer {
+	.footer-inner {
+		.primary {
+			background: $brown1;
+		}
+	}
+}
+
+.breadcrumbs {
+	ul {
+		li {
+			&::before {
+				background: $brown1;
+			}
+		}
+	}
+}
+
+.mCSB_scrollTools {
+	.mCSB_dragger {
+		.mCSB_dragger_bar {
+			background-color: $grey10;
+		}
+		&:hover {
+			.mCSB_dragger_bar {
+				background-color: $brown1;
+			}
+		}
+	}
+}

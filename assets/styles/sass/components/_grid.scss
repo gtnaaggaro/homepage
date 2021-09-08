@@ -1,0 +1,32 @@
+/* Float four columns side by side */
+.i-column {
+    float: left;
+    width: 33.333%;
+    padding: 0 10px;
+
+}
+
+/* Remove extra left and right margins, due to padding */
+.i-row {
+    margin: 0 -5px;
+    display: flex;
+}
+
+/* Clear floats after the columns */
+.i-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 768px) {
+    .i-row {
+        display: block;
+    }
+    .i-column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

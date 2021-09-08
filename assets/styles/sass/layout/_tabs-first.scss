@@ -1,0 +1,449 @@
+/*disable-el  */
+.disable-el {
+	pointer-events: none !important;
+}
+
+/*find-right-product-section */
+.find-right-product-section {
+	position: relative;
+	z-index: 1;
+	&.active {
+		z-index: 0;
+	}
+	.tabs-section {
+		display: block;
+	}
+	.iframe-full-height {
+		display: none;
+	}
+	.iframe-container {
+		.loader {
+			min-height: 450px;
+			background: url("#{$assetPath}icons/iframe-loader.gif") no-repeat center;
+			background-size: 315px;
+			@include mq(tablet-small) {
+				min-height: 350px;
+				background-size: 200px;
+			}
+		}
+	}
+	.notification-alert {
+		top: 0;
+		p {
+			width: calc(100% - 8px);
+		}
+		@media only screen and (max-width: 1024px) {
+			top: auto;
+			bottom: 0;
+			position: relative;
+			margin-left: auto;
+			margin-right: -20px;
+			max-width: 390px;
+		}
+	}
+}
+
+/* Life stage*/
+.life-stage-soltion {
+	.description {
+		p {
+			font-size: 18px;
+			line-height: 154.4%;
+			color: $darkGrey;
+			margin-bottom: 19px;
+		}
+	}
+	.row {
+		width: 100%;
+		margin: 0 -10px;
+		@include display-flex;
+		@include flex-wrap(wrap);
+		@include flex-justify-content(flex-start);
+		@include flex-align-items(flex-start);
+		overflow: hidden;
+		.life-card {
+			text-decoration: none;
+			flex: 0 0 auto;
+			display: inline-flex;
+			vertical-align: middle;
+			width: calc((100% / 3 - 21px));
+			margin: 0 10px 20px;
+			position: relative;
+			background-color: $white !important;
+			height: 121px;
+			@include shadow(0px 4px 28px rgba(232, 232, 222, 0.8));
+			@include radius(10px);
+			overflow: hidden;
+			.lifestage-card {
+				width: 100%;
+				background-position: bottom right;
+				background-repeat: no-repeat;
+			}
+			.image-text {
+				padding: 18px 0 20px 20px;
+				width: 60%;
+				p {
+					font-weight: 300;
+					font-size: 18px;
+					line-height: 120%;
+					letter-spacing: 0.05em;
+					color: $darkGrey;
+					margin-bottom: 20px;
+					text-decoration: none;
+					span {
+						display: block;
+						font-weight: 600;
+					}
+					&.ic-more {
+						font-size: 12px;
+						color: $orange;
+						display: none;
+						text-decoration: none;
+						padding-right: 0;
+						&:after {
+							content: "";
+							display: inline-block;
+							margin-left: 10px;
+							position: static;
+							background: url("#{$assetPath}more.png") no-repeat;
+							width: 10px;
+							height: 10px;
+						}
+					}
+				}
+			}
+			&:hover {
+				.image-text {
+					p {
+						&.ic-more {
+							display: inline-block;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			@media only screen and (max-width: 992px) {
+				width: calc((100% / 2 - 20px));
+			}
+			@media only screen and (max-width: 640px) {
+				width: 100%;
+				.image-text {
+					p {
+						&.ic-more {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* rates & charges start*/
+.interest-rates {
+	background: url("#{$assetPath}tabs1/bg.png") no-repeat;
+	background-size: cover;
+	height: 414px;
+	margin-top: 30px;
+	a {
+		text-decoration: none;
+	}
+	.section-inner {
+		padding-bottom: 50px;
+		padding-top: 60px;
+		.section-title {
+			color: #fff;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.rates-block {
+			position: relative;
+			background: transparent;
+			padding: 40px 60px 38px 60px;
+			border: 1px solid #dedede;
+			@include radius(10px);
+			.rates-slider {
+				color: $white;
+				text-align: center;
+				margin-bottom: 10px;
+				.slick-dots {
+					bottom: -127px !important;
+					text-align: center;
+					li {
+						width: 8px;
+						height: 8px;
+						&.slick-active {
+							border-width: 5px;
+							background-color: #fff;
+							border-color: #fff;
+						}
+					}
+				}
+				.block {
+					display: inline-block !important;
+					padding: 0 40px;
+					text-align: left;
+					vertical-align: bottom;
+					position: relative;
+					float: none;
+					.label {
+						line-height: 144%;
+						color: #f2f2f2;
+					}
+					.rate {
+						font-weight: 700;
+						color: #f2f2f2;
+						font-size: 32px;
+						line-height: 144%;
+					}
+					.category {
+						font-size: 13px;
+						color: $white;
+						text-transform: uppercase;
+						font-weight: 300;
+					}
+					&:last-child {
+						&::after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.share-value {
+			width: 80%;
+			position: absolute;
+			left: 50%;
+			bottom: -38px;
+			@include transform(translateX(-50%));
+			@include shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
+			margin: 0 auto;
+			background: #fafaf6;
+			padding: 20px;
+			text-align: center;
+			@include radius(50px);
+			label,
+			.price,
+			.currency,
+			.profit-loss {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+				color: $green;
+				.sign {
+					margin-left: 8px;
+					&:before {
+						content: "";
+						background-image: url("#{$assetPath}tabs1/green_top-arrow.png");
+						width: 17px;
+						height: 17px;
+						display: inline-block;
+						background-position: center;
+					}
+				}
+			}
+			.profit-loss {
+				font-size: 22px;
+				vertical-align: text-top;
+				sub {
+					bottom: -0.13em;
+					font-size: 22px;
+				}
+			}
+			label {
+				color: $darkGrey;
+				font-weight: 500;
+				text-transform: uppercase;
+				vertical-align: middle;
+			}
+			.price {
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 32px;
+				color: $darkGrey;
+			}
+			.currency {
+				text-transform: uppercase;
+				color: $darkGrey;
+				line-height: normal;
+			}
+		}
+	}
+
+	@include mq(tablet-wide) {
+		height: 445px;
+		.section-inner {
+			.rates-block {
+				.rates-slider {
+					.block {
+						.rate {
+							line-height: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include mq(tablet) {
+		.section-inner {
+			.share-value {
+				label {
+					font-size: 13px;
+					clear: both;
+					display: block;
+					font-weight: bold;
+				}
+				.price {
+					font-size: 24px;
+					line-height: 24px;
+				}
+				.currency {
+					font-size: 13px;
+				}
+				.profit-loss {
+					font-size: 16px;
+					.sign {
+						width: 10px;
+						height: 12px;
+					}
+				}
+			}
+			.rates-block {
+				.rates-slider {
+					.block {
+						white-space: nowrap;
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+	@include mq(phone-wide) {
+		height: auto;
+		.section-inner {
+			padding-bottom: 118px !important;
+			.rates-block {
+				padding: 20px 40px 40px 40px;
+				.rates-slider {
+					.slick-dots {
+						bottom: -122px !important;
+					}
+					.block {
+						padding: 0;
+						.content {
+							margin: 0 auto 10px;
+							&.s_width {
+								max-width: 80px;
+							}
+							&.m_width {
+								max-width: 115px;
+							}
+							&.l_width {
+								max-width: 135px;
+							}
+						}
+						.rate {
+							font-size: 45px;
+							white-space: nowrap;
+							line-height: 1;
+						}
+						.label {
+							font-size: 13px;
+							white-space: nowrap;
+						}
+						.category {
+							white-space: nowrap;
+							font-size: 18px;
+							font-weight: 600;
+						}
+					}
+				}
+			}
+			.share-value {
+				bottom: -38px;
+			}
+		}
+	}
+	@include mq(phone) {
+		.section-inner {
+			.share-value {
+				label,
+				.price,
+				.currency,
+				.profit-loss {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+.share-value-iframe {
+	position: absolute;
+	width: 80%;
+	height: 80px;
+	left: 50%;
+	bottom: -45px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+/* rates & charges end*/
+
+.ui-selectmenu-button-closed,
+.ui-selectmenu-button-open {
+	display: block;
+	border-bottom: 1px solid #c4c4c4;
+	@include flex(auto);
+	margin-right: 30px;
+	position: relative;
+	.ui-selectmenu-text {
+		color: $darkGrey;
+		font-weight: 700;
+		font-size: 16px;
+		padding-bottom: 5px;
+		cursor: pointer;
+	}
+	.ui-icon-triangle-1-s {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid $textGrey;
+		right: 0;
+		top: 7px;
+		margin-right: 0;
+	}
+}
+
+.ui-selectmenu-button-open {
+	.ui-icon-triangle-1-s {
+		border-top: 0;
+		border-bottom: 5px solid #ee781e;
+	}
+}
+
+.ui-selectmenu-button-closed,
+.ui-selectmenu-button-open {
+	width: 100%;
+}
+
+.ui-selectmenu-button-closed,
+.ui-selectmenu-button-open {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.ui-selectmenu-open {
+	background-color: #ffffff;
+	@include shadow(0px 4px 10px rgba(0, 0, 0, 0.05));
+	ul {
+		li {
+			padding: 8px 10px;
+			border-bottom: 1px solid #fafaf6;
+			a {
+				font-size: 12px;
+				color: $textGrey;
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+@import "sass/components/variable";
+
+/* overwrite */
+a:hover,
+a:link,
+a:visited {
+	color: $darkGrey12;
+}
+.ic-more {
+	color: $darkGrey12;
+	&:after {
+		background: url("#{$assetPath}icons/more-dg.png") no-repeat;
+	}
+}
+.left-arrow {
+	&:before {
+		background: url("#{$assetPath}icons/left_arrow_dg.png") no-repeat center
+			center;
+		background-size: 10px;
+	}
+}
+.right-arrow {
+	&:before {
+		background: url("#{$assetPath}icons/right_arrow_dg.png") no-repeat center
+			center;
+		background-size: 10px;
+	}
+}
+
+.ic-btn,
+a.ic-btn:link,
+a.ic-btn:visited {
+	background: $darkGrey12;
+	color: $white;
+	border: 1px solid $darkGrey13;
+	&:hover {
+		background: $darkGrey13;
+		border: 1px solid $darkGrey13;
+	}
+	&.white {
+		color: $darkGrey12;
+		border: 1px solid $darkGrey12;
+		&:hover {
+			background: $darkGrey13;
+			color: $white;
+		}
+	}
+}
+
+.nav-tabs li {
+	&.active {
+		a {
+			background-color: $darkGrey12 !important;
+		}
+		&::before {
+			background: url(#{$assetPath}icons/active-left-dg.png);
+		}
+		&::after {
+			background: url(#{$assetPath}icons/active-right-dg.png);
+		}
+	}
+}
+
+.slick-dots {
+	li {
+		&.slick-active {
+			background: $darkGrey12;
+			border: 2px solid $darkGrey12;
+		}
+	}
+}
+.slick-arrow {
+	&.slick-prev {
+		background: url("#{$assetPath}icons/left_arrow_dg.png") no-repeat 14px 7px;
+	}
+	&.slick-next {
+		background: url("#{$assetPath}icons/left_arrow_dg.png") no-repeat 14px 7px;
+	}
+}
+
+.footer {
+	.footer-inner {
+		.primary {
+			background: $darkGrey12;
+		}
+	}
+}
+
+.breadcrumbs {
+	ul {
+		li {
+			&::before {
+				background: $darkGrey12;
+			}
+		}
+	}
+}
+
+.mCSB_scrollTools {
+	.mCSB_dragger {
+		.mCSB_dragger_bar {
+			background-color: $grey10;
+		}
+		&:hover {
+			.mCSB_dragger_bar {
+				background-color: $darkGrey12;
+			}
+		}
+	}
+}

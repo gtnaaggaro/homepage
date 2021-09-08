@@ -1,0 +1,47 @@
+.audioPlayer {
+   @include display-flex();
+   @include flex-align-items(center);
+
+  	.icon {
+		min-width: 45px;
+		height: 45px;
+		display: inline-block;
+		cursor: pointer;
+
+		&.play-icon {
+			background: url("../images/icons/orange-hub/play-o.svg") no-repeat;
+	   	}
+	
+	   	&.pause-icon {
+			background: url("../images/icons/orange-hub/pause-o.svg") no-repeat;
+		}
+   	}   
+}
+
+.progress-bar {
+	width: calc(100% - 70px);
+    background-color: $grey34;
+	height: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+	border-radius: 20px;
+
+	> .progress {
+		position: relative;
+		background-color: $orange;
+		display: block;
+		width: 0;
+		height: 5px;
+		border-radius: 20px;
+
+		&:after {
+			content:"";
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: -10px;
+			right: -23px;
+			background: url("../images/icons/orange-hub/handler.svg") no-repeat;
+		}
+	}
+}

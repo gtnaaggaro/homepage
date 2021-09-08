@@ -1,0 +1,111 @@
+.banner-calculator input[type="range"] {
+	width: 100%;
+	height: 2px;
+	-webkit-appearance: none;
+	outline: 0;
+	border: 0;
+}
+
+.banner-calculator input[type="range"]::-webkit-slider-runnable-track {
+	background: #ffffff;
+	border-radius: 1.3px;
+	height: 2px;
+	transition: 0.3s;
+}
+
+.banner-calculator input[type="range"]:focus::-webkit-slider-runnable-track,
+.banner-calculator input[type="range"]:hover::-webkit-slider-runnable-track {
+	background: #ffffff;
+}
+
+.banner-calculator input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background: #ffffff;
+	border: none;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	margin-top: -9px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.banner-calculator input[type="range"]:focus::-webkit-slider-thumb,
+.banner-calculator input[type="range"]:hover::-webkit-slider-thumb {
+	background: #ffffff;
+}
+
+.banner-calculator input[type="range"]::-moz-focus-outer {
+	border: 0;
+}
+
+.banner-calculator input[type="range"]::-moz-range-track {
+	background: #777;
+	height: 2px;
+	border-radius: 4px;
+}
+
+.banner-calculator input[type="range"]::-moz-range-thumb {
+	background: #ffffff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.banner-calculator input[type="range"]:focus::-moz-range-thumb,
+.banner-calculator input[type="range"]:hover::-moz-range-thumb {
+	background: #ffffff;
+}
+
+.banner-calculator input[type="range"]::-moz-range-progress {
+	background: #ffffff;
+	border-radius: 4px;
+	height: 2px;
+}
+
+.banner-calculator input[type="range"]:focus::-moz-range-progress,
+.banner-calculator input[type="range"]:hover::-moz-range-progress {
+	background: #ffffff;
+}
+
+.banner-calculator input[type="range"]::-ms-track {
+	background: #777;
+	height: 2px;
+	border-radius: 4px;
+	border: none;
+	color: transparent;
+}
+
+.banner-calculator input[type="range"]:focus::-ms-track,
+.banner-calculator input[type="range"]:hover::-ms-track {
+	background: #777;
+}
+
+.banner-calculator input[type="range"]::-ms-thumb {
+	background: #ffffff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: none;
+	margin: 0 4px 0;
+}
+
+.banner-calculator input[type="range"]:focus::-ms-thumb,
+.banner-calculator input[type="range"]:hover::-ms-thumb {
+	background: #ffffff;
+}
+
+.banner-calculator input[type="range"]::-ms-tooltip {
+	display: none;
+}
+
+.banner-calculator input[type="range"]::-ms-fill-lower {
+	background: #ffffff;
+	border-radius: 4px;
+}
+
+.banner-calculator input[type="range"]:focus::-ms-fill-lower,
+.banner-calculator input[type="range"]:hover::-ms-fill-lower {
+	background: #ffffff;
+}

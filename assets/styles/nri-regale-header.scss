@@ -1,0 +1,269 @@
+$darkGrey12: #7d8082;
+$darkGrey13: #757677;
+$white: #fff;
+$assetPath: "../images/";
+
+/* overwrite */
+.announcement-section {
+	.section-inner {
+		.link {
+			ul {
+				li {
+					&:last-child {
+						a {
+							border-color: $darkGrey12;
+						}
+					}
+					a {
+						color: $darkGrey12;
+					}
+				}
+			}
+		}
+	}
+}
+
+.notification {
+	.notifications-count {
+		background: $darkGrey12;
+	}
+}
+a:hover,
+a:link,
+a:visited {
+	color: $darkGrey12;
+}
+.ic-more {
+	color: $darkGrey12;
+	&:after {
+		background: url("#{$assetPath}icons/more-dg.png") no-repeat;
+	}
+}
+
+.ic-btn,
+a.ic-btn:link,
+a.ic-btn:visited {
+	background: $darkGrey12;
+	color: $white;
+	border: 1px solid $darkGrey13;
+	&:hover {
+		background: $darkGrey13;
+		border: 1px solid $darkGrey13;
+	}
+	&.white {
+		color: $darkGrey12;
+		border: 1px solid $darkGrey12;
+		&:hover {
+			background: $darkGrey13;
+			color: $white;
+		}
+	}
+}
+
+.new-header {
+	&.desktop {
+		.menu-level-1-child {
+			&.left-side-menu {
+				ul {
+					li {
+						&.other-menu {
+							&.active,
+							&.current {
+								.link-area {
+									a {
+										background-color: $darkGrey12 !important;
+									}
+									&::before {
+										background: url("#{$assetPath}icons/active-left-dg.png");
+									}
+									&::after {
+										background: url("#{$assetPath}icons/active-right-dg.png");
+									}
+								}
+							}
+							&:hover {
+								.link-area {
+									a {
+										color: $darkGrey12;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.other-dropdown {
+				background: linear-gradient(
+					159.86deg,
+					$darkGrey12 46%,
+					$darkGrey13 85.09%
+				);
+				.dropdown-inner {
+					.left-block {
+						ul {
+							li {
+								a {
+									color: $white;
+									&.active {
+										color: $darkGrey12;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			&.right-side-menu {
+				.right-side-ul {
+					> li {
+						&.active {
+							span.open-status {
+								background: url("#{$assetPath}/arrow_down_grey.png") no-repeat
+									left center;
+							}
+						}
+						&.languageselect,
+						&.countryselect {
+							&:hover {
+								.drop-select {
+									&::after {
+										background: url("#{$assetPath}/arrow_down_grey.png")
+											no-repeat center;
+									}
+								}
+							}
+						}
+						&.lang-icon {
+							&:hover {
+								a {
+									color: $darkGrey12;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.user-login {
+			.ic-btn {
+				background-color: $darkGrey12;
+				border-color: $darkGrey12;
+				&:hover {
+					background-color: $darkGrey13;
+					border-color: $darkGrey13;
+				}
+			}
+		}
+		.personal-banking {
+			&::after {
+				background: url("../images/arrow_down_grey.png") no-repeat;
+			}
+			&:hover {
+				&::after {
+					background: url("../images/arrow_down_grey.png") no-repeat;
+				}
+			}
+		}
+		.sub-menu-wrapper {
+			.sub-menu-inner {
+				ul {
+					li {
+						a {
+							color: $darkGrey12;
+						}
+						&:hover {
+							background: $darkGrey12;
+						}
+					}
+				}
+			}
+		}
+	}
+	.search {
+		.menu-search-box,
+		.mob-menu-search-box {
+			form {
+				border: 2px solid $darkGrey12;
+				.mic {
+					background: url("#{$assetPath}icons/mic-dg.svg") no-repeat center;
+				}
+				.search-btn {
+					background: url("#{$assetPath}icons/icon_search_dg.svg") no-repeat
+						center;
+				}
+			}
+		}
+	}
+	.main-menu {
+		ul.primary-menu {
+			> li {
+				&:hover {
+					span {
+						color: $darkGrey12;
+					}
+				}
+				&.is-active {
+					span {
+						color: $darkGrey12;
+					}
+					.menu-item {
+						&::before {
+							background: $darkGrey12;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-tabs li {
+	&.active {
+		a {
+			background-color: $darkGrey12 !important;
+		}
+		&::before {
+			background: url(#{$assetPath}icons/active-left-m.png);
+		}
+		&::after {
+			background: url(#{$assetPath}icons/active-right-m.png);
+		}
+	}
+}
+
+.slick-dots {
+	li {
+		&.slick-active {
+			background: $darkGrey12;
+			border: 2px solid $darkGrey12;
+		}
+	}
+}
+
+.footer {
+	.footer-inner {
+		.primary {
+			background: $darkGrey12;
+		}
+	}
+}
+
+.breadcrumbs {
+	ul {
+		li {
+			&::before {
+				background: $darkGrey12;
+			}
+		}
+	}
+}
+
+.mCSB_scrollTools {
+	.mCSB_dragger {
+		&:hover {
+			.mCSB_dragger_bar {
+				background-color: $darkGrey12;
+			}
+		}
+	}
+}

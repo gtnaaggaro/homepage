@@ -1,0 +1,178 @@
+
+.deal-card {
+    background: $white;
+    padding: 53px 30px;
+    margin: 0 12px;
+    .deal-inner {
+        .image {
+            margin-bottom: 21px;
+            height: 50px;
+            img {
+                height: auto;
+            }
+        }
+        .offer {
+            color: $textGrey;
+            font-size: 22px;
+            line-height: 30px;
+            margin-bottom: 18px;
+            max-width: 100%;
+            width: 100%;
+        }
+        .description {
+            margin-bottom: 35px;
+            color: #8B8B8B;
+        }
+        .buttons {
+            @include display-flex;
+            @include flex-align-items(baseline);
+            .ic-btn {
+                padding: 12.5px 20px;
+                &.white {
+                    border: 0;
+                }
+            }
+        }
+    }
+    @include mq(tablet) {
+        margin: 0 12px;
+        padding: 40px 21px;
+        .deal-inner {
+            .offer {
+                font-size: 18px;
+                line-height: normal;
+                margin-bottom: 10px;
+            }
+            .image {
+                margin-bottom: 15px;
+            }
+            .description {
+                margin-bottom: 20px;
+            }
+            .buttons {
+                @include display-flex;
+                .ic-btn {
+                    padding: 5px 10px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+     @include mq(tablet-small){
+        margin:0 20px 0 0;
+     }
+}
+
+.testimonial {
+    background: url('#{$assetPath}quote-white.png') no-repeat;
+    background-position: 30px 40px;
+    background-size: 45px;
+    .description {
+        font-weight: 300;
+        font-size: 23px;
+        line-height: 150%;
+        color: #4F4F4F;
+        margin-bottom: 45px;
+    }
+    .name {
+        font-weight: 700;
+        color: #4B4B4B;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    .designation {
+        font-size: 14px;
+        color: #4B4B4B;
+    }
+}
+
+.choose-us-slider {
+    .card-item {
+        @include radius(4px);
+        @include transition(background 0.3s);
+        margin: 0 15px;
+        padding: 15px 30px;
+        width: 33.3%;
+        .title {
+            font-weight: 400;
+            font-size: 22px;
+            // color: $white;
+            line-height: 120%;
+            padding: 10px 0 10px 0;
+            position: relative;
+            margin-bottom: 10px;
+            min-height: 60px;
+            max-width: 70%;
+            width: 100%;
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        .description {
+            // color: $white;
+            margin-bottom: 24px;
+            opacity: 0.8;
+            line-height: 21px;
+        }
+        .ic-btn {
+            border: 0;
+            &.white {
+                background: $white;
+            }
+        }
+    }
+    @include mq(tablet) {
+        .card-item {
+            width: 100%;
+        }
+        
+    }
+}
+
+// cards
+.i-card {
+    background-color: $white;
+    padding: 24px 30px;
+    border: 1px solid #DEDEDE;
+    @include shadow(0px 4px 15px rgba(117, 117, 117, 0.2));
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.i-card__title {
+    font-size: 22px;
+    line-height: normal;
+    color: #4B4B4B;
+    margin-bottom:15px;
+}
+.i-card__subtitle {
+    margin-bottom:15px;
+}
+.i-card__list-item {
+    color: #8B8B8B;
+}
+.i-card__box--dotted {
+    border: 1px dotted $black;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.i-card__box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.i-card__img {
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+.ic-btn-full {
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+@import "../layout/home-slider";
+@import "../layout/home-card";
+@import "../layout/tabs-first";
+@import "../layout/tabs-second";
+@import "../layout/tabs-third";
+@import "../layout/blog";
+@import "../layout/choose-us";
+@import "../layout/security";
+
+.homepage-content {
+	position: relative;
+	overflow: hidden;
+
+	@media screen and (max-width: 991px) {
+		margin-top: 110px;
+	}
+
+	.banner-card-section {
+		position: relative;
+	}
+
+	/* .ways-to-bank-section */
+	.ways-to-bank-section {
+		.notification-alert {
+			top: -40px;
+		}
+	}
+}

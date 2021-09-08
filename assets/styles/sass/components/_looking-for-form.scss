@@ -1,0 +1,366 @@
+/* lead capture form starts*/
+.lead-capture-form { 
+  overflow: hidden;
+  
+  .section-title {     
+    width: 100%;
+    font-size: 26px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 115%;
+    margin-bottom: 20px;
+
+    @include mq(768px) {
+      font-size: 22px;
+    }    
+  }
+
+  .section-inner {
+      @include display-flex;  
+      @include flex-wrap(wrap);  
+  }
+
+  .input-group {
+    position: relative;
+    @include display-flex;    
+    @include flex-align-items(center);
+    padding: 5px 10px 8px 0;
+    border-bottom: 0.5px solid $darkGrey8;
+    margin-bottom: 2px;
+
+    &.error {
+      border-bottom: 0.5px solid $maroon;
+    }
+
+    .icon {
+      margin-right: 10px;
+      width: 20px;
+    }
+
+    .input-box {
+      width: calc(100% - 30px);
+
+      input {
+        border: 0;
+        color: $textGreyLight;
+        max-width: 300px;
+        width: 100%;
+        line-height: 21px;
+
+        &.error {
+          color: $red1;
+        }
+
+        &::placeholder {
+          color: $textGreyLight;
+        }
+
+        &::-ms-clear {
+          display: none;
+        }
+
+        &:-internal-autofill-selected,
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus &:-webkit-autofill {
+          @include shadow(0 0 0 50px white inset);
+        }
+        
+      }
+
+      input[type='number'] {
+        -moz-appearance:textfield;
+      }
+      
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+      }
+    }
+
+    &.active {
+      border-bottom: 0.5px solid $orange;
+      
+      .icon {
+        svg {
+          path {
+            fill: $orange;
+          }
+
+          &.mob-svg {
+            path {
+              fill: transparent;
+              stroke: $orange;
+            }            
+          }         
+        }        
+      }      
+    }
+
+    .error-txt {
+      display: none;
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      font-size: 12px;
+      color: $red1;
+
+      @include mq(991px) {
+        bottom: -20px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .callback-form {
+    width: 100%;
+    padding: 40px 50px;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    @include shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    .title {
+      font-size: 22px;
+      line-height: 30px;
+      font-weight: 600;
+      max-width: 90%;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    .form-group {
+      @include display-flex;  
+      @include flex-wrap(wrap);
+      margin: 0 -30px 40px;
+
+      .input-group {
+        width: calc(50% - 60px);
+        margin: 0 30px;        
+        
+      }
+    }
+
+    &.orange-bg {
+      .form-group {
+        .input-group {
+          input {
+            background-color: $textGreyLight2;
+  
+            &:focus {
+              background-color: $textGreyLight2 !important;
+            }
+          }
+        }
+      }
+    }
+
+    .ic-btn {
+      min-width: 140px;
+    }
+
+    .success-txt {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: none;
+      border-radius: 10px;    
+      padding: 30px;
+      text-align: center;
+
+      &.show {
+        @include display-flex;  
+        @include flex-direction(column);
+        @include flex-align-items(center);
+      }
+
+      svg {
+        margin-top: 40px;
+        margin-bottom: 26px;
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 1.5;
+        text-transform: capitalize;        
+        color: #3D3D3D;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 138%;
+        text-transform: capitalize;        
+        color: #3D3D3D;
+        margin-bottom: 22px;
+
+        &.small {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 138%;
+          color: #8B8B8B;
+          margin-bottom: 0;
+          text-transform: none;
+        }
+      }     
+    }
+
+  }  
+
+  &.call-back-section { 
+    .looking-for-section {
+      width: 40%;
+  
+      .content {
+        display: block;
+        margin: 0;
+  
+        .list {
+          padding: 0 0 40px;
+  
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    
+    .callback-form {
+      width: 60%;
+
+      p{
+        font-size: 22px;
+        line-height: 138%;
+        font-weight: 500;
+        max-width: 450px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &.lead-capture-full-width {  
+    .looking-for-section {
+      width: 100%;
+    }
+
+    .callback-form {
+      margin-bottom: 30px;
+
+      .form-group {  
+        .input-group {
+          width: calc(33% - 60px);
+        }
+      }
+    }
+  }
+
+  &.lead-capture-small-width {
+    .title {
+      max-width: 280px;
+      font-size: 14px;
+      line-height: 138%;
+      margin-bottom: 20px;
+    }
+    .callback-form {      
+      border: 1px solid $darkGrey9;
+      padding: 20px 30px;
+
+      .form-group {
+        display: block;
+        margin: 0;
+        .input-group { 
+          width: 100%;
+          margin: 0 0 40px;
+        }
+      }
+    }
+  }
+
+  @include mq(991px) {
+    &.call-back-section { 
+      .looking-for-section {
+        width: 100%;   
+        .content {
+          .list {
+            padding: 0 0 20px;
+          }
+        }
+      }
+      .callback-form {
+        width: 100%;
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .section-inner {
+      display: block;
+    }
+
+    .callback-form {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        display: block;
+        margin: 0;
+
+        .input-group {
+          margin: 0 0 30px;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+/* lead capture form Ends*/
+
+.looking-for-wrapper {
+	overflow: hidden;
+
+	.looking-for-form {
+		padding: 20px 65px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 10px;
+		margin-bottom: 40px;
+
+		.loan-forms {
+			@include flex-align-items(center);
+
+			.text-left {
+				max-width: 380px;
+				margin-right: 70px;
+
+				p {
+					font-size: 22px;
+					line-height: 30px;
+					font-weight: 600;
+				}
+			}
+		}
+
+    @include mq(991px) {
+      padding: 20px;
+
+      .loan-forms {
+        display: block;
+        background: transparent;
+        padding: 0;
+
+        .text-left {
+          margin-bottom: 20px;
+        }
+      }
+    }
+	}
+}

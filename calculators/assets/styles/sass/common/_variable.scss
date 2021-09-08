@@ -1,0 +1,79 @@
+/* font */
+@import "font-muli";
+
+/*Path*/
+$assetPath: "../images/";
+/*Colors*/
+$maroon: #ad1e23;
+$orange: #f37e20;
+$blue: #074a86;
+$blue1: #074a86;
+$blue2: #0f5fa5;
+$white: #fff;
+$black: #000;
+$textGrey: #4b4b4b;
+$textGreyLight: #a6a6a6;
+$textGreyLight1: #afafaf;
+$textGreyLight2: #fff7eb;
+$textGreyLight3: #e5e5e5;
+$grey1: #d1cfbb;
+$grey2: #646464;
+$grey3: #333;
+$grey4: #f6f6f6;
+$grey5: #8b8b8b;
+$grey6: #f9f9f9;
+$grey7: #fdfdfd;
+$grey8: #bdbdbd;
+$grey9: #dedede;
+$grey10: #c4c4c4;
+$grey11: #e6e6e6;
+$grey12: #929292;
+$grey13: #626262;
+$grey14: #818181;
+$grey15: #e9e7e7;
+$grey16: #fdf6f4;
+$grey17: #f2f5f6;
+$grey18: #ebe7e7;
+$grey19: #f5f3f3;
+$grey20: #999999;
+$grey21: #666666;
+$bgGrey: #0a0a09;
+$darkGrey: #3d3d3d;
+$darkGrey2: #737373;
+$darkGrey3: #333a43;
+$menuTitle: #364255;
+$menuListItem: #828282;
+$green: #3fc41d;
+$green1: #219653;
+$red: #a41906;
+$red1: #e6371f;
+$light-orange: #fff0e6;
+$light-sky: #eaf5ff;
+
+/* background */
+.orange {
+  background-color: $orange;
+}
+
+.light-orange {
+  background-color: $light-orange;
+}
+.grey {
+  background-color: $grey2;
+}
+.white {
+  background-color: $white;
+}
+.black {
+  background-color: $black;
+}
+.light-sky {
+  background-color: $light-sky;
+}
+.textGreyLight3 {
+  color: $textGreyLight3;
+}
+
+/*Other*/
+$max-width: 1260px;
+$font-family: "Muli", sans-serif;
